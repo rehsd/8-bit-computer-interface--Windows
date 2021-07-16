@@ -55,6 +55,7 @@ namespace EightBitInterface
                 ControlCounterEnable.BackColor = Color.LightGray;
                 ControlCounterOut.BackColor = Color.LightGray;
                 ControlJump.BackColor = Color.LightGray;
+                ControlFlags.BackColor = Color.LightGray;
 
                 //Default programming values
                 Mem0000.Text = "00011111";  //load from 15
@@ -131,7 +132,8 @@ namespace EightBitInterface
                             OutputRichtext.Lines = lines.ToArray();
                         }
 
-                        string stmp = myPort.ReadExisting();
+                        //string stmp = myPort.ReadExisting();
+                        string stmp = myPort.ReadLine();
                         OutputRichtext.Text += stmp;
                         OutputRichtext.SelectionStart = OutputRichtext.Text.Length;
                         OutputRichtext.ScrollToCaret();
@@ -164,9 +166,10 @@ namespace EightBitInterface
                     OutputLabel.Text = stmp.Substring(startingLoc+1, closingLoc - startingLoc-1);
                 }
             }
-            catch (Exception xcp)
+            catch
             {
-                MessageBox.Show(xcp.Message, "Ya'...., something failed...");
+                //Ignore for now
+                //MessageBox.Show(xcp.Message, "Ya'...., something failed...");
             }
 
         }
@@ -298,6 +301,14 @@ namespace EightBitInterface
                     else
                     {
                         ControlJump.BackColor = Color.LightGray;
+                    }
+                    if(stmp.Substring(37,1)=="1")
+                    {
+                        ControlFlags.BackColor = setColor;
+                    }
+                    else
+                    {
+                        ControlFlags.BackColor = Color.LightGray;
                     }
 
                 }
@@ -459,6 +470,16 @@ namespace EightBitInterface
                     case "0110":    //JMP
                         {
                             opCodeLabel.Text = "JMP";
+                            break;
+                        }
+                    case "0111":    //JC
+                        {
+                            opCodeLabel.Text = "JC";
+                            break;
+                        }
+                    case "1000":    //JZ
+                        {
+                            opCodeLabel.Text = "JZ";
                             break;
                         }
                     case "1110":    //OUT
@@ -637,6 +658,7 @@ namespace EightBitInterface
 
         }
 
+        //TODO Consolidate the following Click event handlers...
         private void code0000_Click(object sender, EventArgs e)
         {
             if (code0000.Text=="NonOp")
@@ -862,5 +884,7 @@ namespace EightBitInterface
             AboutBox a = new AboutBox();
             a.Show();
         }
+
+   
     }
 }
