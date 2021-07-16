@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <StartupObject>EightBitInterface.Program</StartupObject>
+    <RootNamespace>EightBitInterface</RootNamespace>
+    <Version>0.0.1</Version>
+    <Description>This program is used to communicate with an Arduino with the corresponding project code. Interfacing with boards based on Ben Eater's 8-bit computer reference design.
+
+This code and software is provided as-is. Use at your own risk!</Description>
+    <AssemblyVersion>0.0.0.1</AssemblyVersion>
+    <FileVersion>0.0.0.1</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>5</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.IO.Ports" Version="5.0.1" />
+  </ItemGroup>
+
+</Project>
