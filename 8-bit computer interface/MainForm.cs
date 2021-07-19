@@ -115,7 +115,7 @@ namespace EightBitInterface
             {
                 MessageBox.Show(xcp.Message, "Ya'...., something failed...");
             }
-        }   
+        }
 
         private void MyPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
@@ -140,6 +140,7 @@ namespace EightBitInterface
                         UpdateBusDisplay(stmp);
                         UpdateControlDisplay(stmp);
                         UpdateOutputDisplay(stmp);
+                        UpdateClockDisplay(stmp);
                     }));
                 }
                 else
@@ -154,6 +155,25 @@ namespace EightBitInterface
 
         }
 
+
+        void UpdateClockDisplay(string stmp)
+        {
+            try
+            {
+                int startingLoc = stmp.IndexOf("Clock:");
+                
+                //int closingLoc = stmp.IndexOf("]");
+                if (startingLoc > 0)
+                {
+                    clockLabel.Text = stmp.Substring(startingLoc + 6, stmp.Length-startingLoc-7);
+                }
+            }
+            catch
+            {
+                //Ignore for now
+                //MessageBox.Show(xcp.Message, "Ya'...., something failed...");
+            }
+        }
 
         void UpdateOutputDisplay(string stmp)
         {

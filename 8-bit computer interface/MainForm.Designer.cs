@@ -136,6 +136,8 @@ namespace EightBitInterface
             this.StartMonitorButton = new System.Windows.Forms.Button();
             this.connectionStatusPictureBox = new System.Windows.Forms.PictureBox();
             this.AboutButton = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.clockLabel = new System.Windows.Forms.Label();
             this.BusGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bus8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bus7)).BeginInit();
@@ -165,6 +167,7 @@ namespace EightBitInterface
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.connectionStatusPictureBox)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // ConnectButton
@@ -172,7 +175,7 @@ namespace EightBitInterface
             this.ConnectButton.Location = new System.Drawing.Point(157, 11);
             this.ConnectButton.Margin = new System.Windows.Forms.Padding(1);
             this.ConnectButton.Name = "ConnectButton";
-            this.ConnectButton.Size = new System.Drawing.Size(108, 28);
+            this.ConnectButton.Size = new System.Drawing.Size(107, 28);
             this.ConnectButton.TabIndex = 1;
             this.ConnectButton.Text = "&Connect";
             this.ConnectButton.UseVisualStyleBackColor = true;
@@ -201,7 +204,7 @@ namespace EightBitInterface
             this.SendButton.Location = new System.Drawing.Point(390, 63);
             this.SendButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SendButton.Name = "SendButton";
-            this.SendButton.Size = new System.Drawing.Size(68, 25);
+            this.SendButton.Size = new System.Drawing.Size(69, 31);
             this.SendButton.TabIndex = 6;
             this.SendButton.Text = "&Send";
             this.SendButton.UseVisualStyleBackColor = true;
@@ -212,7 +215,7 @@ namespace EightBitInterface
             this.OutputRichtext.Location = new System.Drawing.Point(15, 93);
             this.OutputRichtext.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OutputRichtext.Name = "OutputRichtext";
-            this.OutputRichtext.Size = new System.Drawing.Size(445, 442);
+            this.OutputRichtext.Size = new System.Drawing.Size(580, 753);
             this.OutputRichtext.TabIndex = 24;
             this.OutputRichtext.Text = "";
             // 
@@ -226,7 +229,7 @@ namespace EightBitInterface
             this.BusGroup.Controls.Add(this.bus3);
             this.BusGroup.Controls.Add(this.bus2);
             this.BusGroup.Controls.Add(this.bus1);
-            this.BusGroup.Location = new System.Drawing.Point(586, 271);
+            this.BusGroup.Location = new System.Drawing.Point(762, 186);
             this.BusGroup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BusGroup.Name = "BusGroup";
             this.BusGroup.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -341,7 +344,7 @@ namespace EightBitInterface
             this.ControlGroup.Controls.Add(this.ControlMemIn);
             this.ControlGroup.Controls.Add(this.ControlMemAddrIn);
             this.ControlGroup.Controls.Add(this.ControlHalt);
-            this.ControlGroup.Location = new System.Drawing.Point(470, 394);
+            this.ControlGroup.Location = new System.Drawing.Point(622, 286);
             this.ControlGroup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ControlGroup.Name = "ControlGroup";
             this.ControlGroup.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -385,7 +388,7 @@ namespace EightBitInterface
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(420, 80);
+            this.label14.Location = new System.Drawing.Point(421, 80);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(27, 30);
             this.label14.TabIndex = 43;
@@ -396,7 +399,7 @@ namespace EightBitInterface
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(388, 80);
+            this.label13.Location = new System.Drawing.Point(389, 80);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(30, 30);
             this.label13.TabIndex = 42;
@@ -495,7 +498,7 @@ namespace EightBitInterface
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(292, 80);
+            this.label4.Location = new System.Drawing.Point(293, 80);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 45);
             this.label4.TabIndex = 33;
@@ -537,7 +540,7 @@ namespace EightBitInterface
             // 
             // ControlJump
             // 
-            this.ControlJump.Location = new System.Drawing.Point(452, 32);
+            this.ControlJump.Location = new System.Drawing.Point(453, 32);
             this.ControlJump.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ControlJump.Name = "ControlJump";
             this.ControlJump.Size = new System.Drawing.Size(22, 37);
@@ -618,7 +621,7 @@ namespace EightBitInterface
             // 
             // ControlInstRegIn
             // 
-            this.ControlInstRegIn.Location = new System.Drawing.Point(172, 32);
+            this.ControlInstRegIn.Location = new System.Drawing.Point(171, 32);
             this.ControlInstRegIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ControlInstRegIn.Name = "ControlInstRegIn";
             this.ControlInstRegIn.Size = new System.Drawing.Size(22, 37);
@@ -673,7 +676,7 @@ namespace EightBitInterface
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.OutputLabel);
-            this.groupBox1.Location = new System.Drawing.Point(593, 97);
+            this.groupBox1.Location = new System.Drawing.Point(638, 45);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -749,7 +752,7 @@ namespace EightBitInterface
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.Mem0000);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox2.Location = new System.Drawing.Point(1004, 75);
+            this.groupBox2.Location = new System.Drawing.Point(631, 436);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -954,7 +957,7 @@ namespace EightBitInterface
             // 
             this.label36.AutoSize = true;
             this.label36.ForeColor = System.Drawing.Color.DimGray;
-            this.label36.Location = new System.Drawing.Point(421, 34);
+            this.label36.Location = new System.Drawing.Point(421, 35);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(81, 340);
             this.label36.TabIndex = 39;
@@ -1391,7 +1394,7 @@ namespace EightBitInterface
             // connectionStatusPictureBox
             // 
             this.connectionStatusPictureBox.BackColor = System.Drawing.Color.Red;
-            this.connectionStatusPictureBox.Location = new System.Drawing.Point(268, 13);
+            this.connectionStatusPictureBox.Location = new System.Drawing.Point(267, 13);
             this.connectionStatusPictureBox.Margin = new System.Windows.Forms.Padding(1);
             this.connectionStatusPictureBox.Name = "connectionStatusPictureBox";
             this.connectionStatusPictureBox.Size = new System.Drawing.Size(27, 24);
@@ -1400,7 +1403,7 @@ namespace EightBitInterface
             // 
             // AboutButton
             // 
-            this.AboutButton.Location = new System.Drawing.Point(1430, 14);
+            this.AboutButton.Location = new System.Drawing.Point(1430, 13);
             this.AboutButton.Name = "AboutButton";
             this.AboutButton.Size = new System.Drawing.Size(78, 27);
             this.AboutButton.TabIndex = 27;
@@ -1408,12 +1411,35 @@ namespace EightBitInterface
             this.AboutButton.UseVisualStyleBackColor = true;
             this.AboutButton.Click += new System.EventHandler(this.AboutButton_Click);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.clockLabel);
+            this.groupBox3.Location = new System.Drawing.Point(898, 45);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox3.Size = new System.Drawing.Size(229, 133);
+            this.groupBox3.TabIndex = 25;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Clock";
+            // 
+            // clockLabel
+            // 
+            this.clockLabel.Font = new System.Drawing.Font("Consolas", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.clockLabel.Location = new System.Drawing.Point(9, 20);
+            this.clockLabel.Name = "clockLabel";
+            this.clockLabel.Size = new System.Drawing.Size(198, 105);
+            this.clockLabel.TabIndex = 0;
+            this.clockLabel.Text = "0";
+            this.clockLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // MainForm
             // 
             this.AcceptButton = this.SendButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1528, 569);
+            this.ClientSize = new System.Drawing.Size(1169, 887);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.AboutButton);
             this.Controls.Add(this.connectionStatusPictureBox);
             this.Controls.Add(this.StartMonitorButton);
@@ -1462,6 +1488,7 @@ namespace EightBitInterface
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.connectionStatusPictureBox)).EndInit();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1576,6 +1603,8 @@ namespace EightBitInterface
         private System.Windows.Forms.Button AboutButton;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.PictureBox ControlFlags;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label clockLabel;
     }
 }
 
