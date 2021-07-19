@@ -132,8 +132,8 @@ namespace EightBitInterface
                             OutputRichtext.Lines = lines.ToArray();
                         }
 
-                        //string stmp = myPort.ReadExisting();
-                        string stmp = myPort.ReadLine();
+                        string stmp = myPort.ReadExisting();
+                        //string stmp = myPort.ReadLine();
                         OutputRichtext.Text += stmp;
                         OutputRichtext.SelectionStart = OutputRichtext.Text.Length;
                         OutputRichtext.ScrollToCaret();
