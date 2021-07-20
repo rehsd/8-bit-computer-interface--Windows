@@ -231,7 +231,7 @@ namespace EightBitInterface
             this.BusGroup.Controls.Add(this.bus3);
             this.BusGroup.Controls.Add(this.bus2);
             this.BusGroup.Controls.Add(this.bus1);
-            this.BusGroup.Location = new System.Drawing.Point(1593, 353);
+            this.BusGroup.Location = new System.Drawing.Point(1538, 353);
             this.BusGroup.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.BusGroup.Name = "BusGroup";
             this.BusGroup.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
@@ -694,7 +694,7 @@ namespace EightBitInterface
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.OutputLabel);
-            this.groupBox1.Location = new System.Drawing.Point(1330, 64);
+            this.groupBox1.Location = new System.Drawing.Point(1278, 64);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
@@ -1483,10 +1483,11 @@ namespace EightBitInterface
             // 
             // AboutButton
             // 
-            this.AboutButton.Location = new System.Drawing.Point(3039, 27);
+            this.AboutButton.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AboutButton.Location = new System.Drawing.Point(2287, 15);
             this.AboutButton.Margin = new System.Windows.Forms.Padding(6);
             this.AboutButton.Name = "AboutButton";
-            this.AboutButton.Size = new System.Drawing.Size(166, 55);
+            this.AboutButton.Size = new System.Drawing.Size(94, 48);
             this.AboutButton.TabIndex = 27;
             this.AboutButton.Text = "&About";
             this.AboutButton.UseVisualStyleBackColor = true;
@@ -1495,7 +1496,7 @@ namespace EightBitInterface
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.clockLabel);
-            this.groupBox3.Location = new System.Drawing.Point(1882, 64);
+            this.groupBox3.Location = new System.Drawing.Point(1830, 64);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
@@ -1521,7 +1522,7 @@ namespace EightBitInterface
             this.AcceptButton = this.SendButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2490, 1818);
+            this.ClientSize = new System.Drawing.Size(2406, 1818);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.AboutButton);
             this.Controls.Add(this.connectionStatusPictureBox);

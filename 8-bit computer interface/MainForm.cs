@@ -639,7 +639,7 @@ namespace EightBitInterface
                 {
                     myPort.Write("X");
                     StartMonitorButton.Text = "Start &Monitor";
-                    ProgramRAMButton.Enabled = false;
+                    ProgramRAMButton.Enabled = true;
                 }
             }
             catch (Exception xcp)
