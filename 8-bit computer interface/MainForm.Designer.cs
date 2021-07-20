@@ -174,10 +174,10 @@ namespace EightBitInterface
             // 
             // ConnectButton
             // 
-            this.ConnectButton.Location = new System.Drawing.Point(334, 23);
-            this.ConnectButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ConnectButton.Location = new System.Drawing.Point(157, 11);
+            this.ConnectButton.Margin = new System.Windows.Forms.Padding(1);
             this.ConnectButton.Name = "ConnectButton";
-            this.ConnectButton.Size = new System.Drawing.Size(227, 57);
+            this.ConnectButton.Size = new System.Drawing.Size(107, 28);
             this.ConnectButton.TabIndex = 1;
             this.ConnectButton.Text = "&Connect";
             this.ConnectButton.UseVisualStyleBackColor = true;
@@ -187,26 +187,26 @@ namespace EightBitInterface
             // 
             this.PortsCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PortsCombo.FormattingEnabled = true;
-            this.PortsCombo.Location = new System.Drawing.Point(30, 23);
-            this.PortsCombo.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.PortsCombo.Location = new System.Drawing.Point(14, 11);
+            this.PortsCombo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PortsCombo.Name = "PortsCombo";
-            this.PortsCombo.Size = new System.Drawing.Size(289, 49);
+            this.PortsCombo.Size = new System.Drawing.Size(138, 28);
             this.PortsCombo.TabIndex = 0;
             // 
             // CommandTextbox
             // 
-            this.CommandTextbox.Location = new System.Drawing.Point(32, 129);
-            this.CommandTextbox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.CommandTextbox.Location = new System.Drawing.Point(15, 63);
+            this.CommandTextbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CommandTextbox.Name = "CommandTextbox";
-            this.CommandTextbox.Size = new System.Drawing.Size(786, 47);
+            this.CommandTextbox.Size = new System.Drawing.Size(372, 27);
             this.CommandTextbox.TabIndex = 5;
             // 
             // SendButton
             // 
-            this.SendButton.Location = new System.Drawing.Point(829, 129);
-            this.SendButton.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.SendButton.Location = new System.Drawing.Point(390, 63);
+            this.SendButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SendButton.Name = "SendButton";
-            this.SendButton.Size = new System.Drawing.Size(147, 64);
+            this.SendButton.Size = new System.Drawing.Size(69, 31);
             this.SendButton.TabIndex = 6;
             this.SendButton.Text = "&Send";
             this.SendButton.UseVisualStyleBackColor = true;
@@ -214,10 +214,10 @@ namespace EightBitInterface
             // 
             // OutputRichtext
             // 
-            this.OutputRichtext.Location = new System.Drawing.Point(32, 191);
-            this.OutputRichtext.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.OutputRichtext.Location = new System.Drawing.Point(15, 93);
+            this.OutputRichtext.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OutputRichtext.Name = "OutputRichtext";
-            this.OutputRichtext.Size = new System.Drawing.Size(1137, 1539);
+            this.OutputRichtext.Size = new System.Drawing.Size(537, 753);
             this.OutputRichtext.TabIndex = 24;
             this.OutputRichtext.Text = "";
             // 
@@ -231,84 +231,84 @@ namespace EightBitInterface
             this.BusGroup.Controls.Add(this.bus3);
             this.BusGroup.Controls.Add(this.bus2);
             this.BusGroup.Controls.Add(this.bus1);
-            this.BusGroup.Location = new System.Drawing.Point(1538, 353);
-            this.BusGroup.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.BusGroup.Location = new System.Drawing.Point(724, 172);
+            this.BusGroup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BusGroup.Name = "BusGroup";
-            this.BusGroup.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.BusGroup.Size = new System.Drawing.Size(487, 189);
+            this.BusGroup.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BusGroup.Size = new System.Drawing.Size(229, 92);
             this.BusGroup.TabIndex = 15;
             this.BusGroup.TabStop = false;
             this.BusGroup.Text = "Bus";
             // 
             // bus8
             // 
-            this.bus8.Location = new System.Drawing.Point(408, 66);
-            this.bus8.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.bus8.Location = new System.Drawing.Point(192, 32);
+            this.bus8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bus8.Name = "bus8";
-            this.bus8.Size = new System.Drawing.Size(47, 76);
+            this.bus8.Size = new System.Drawing.Size(22, 37);
             this.bus8.TabIndex = 22;
             this.bus8.TabStop = false;
             // 
             // bus7
             // 
-            this.bus7.Location = new System.Drawing.Point(355, 66);
-            this.bus7.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.bus7.Location = new System.Drawing.Point(167, 32);
+            this.bus7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bus7.Name = "bus7";
-            this.bus7.Size = new System.Drawing.Size(47, 76);
+            this.bus7.Size = new System.Drawing.Size(22, 37);
             this.bus7.TabIndex = 21;
             this.bus7.TabStop = false;
             // 
             // bus6
             // 
-            this.bus6.Location = new System.Drawing.Point(302, 66);
-            this.bus6.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.bus6.Location = new System.Drawing.Point(142, 32);
+            this.bus6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bus6.Name = "bus6";
-            this.bus6.Size = new System.Drawing.Size(47, 76);
+            this.bus6.Size = new System.Drawing.Size(22, 37);
             this.bus6.TabIndex = 20;
             this.bus6.TabStop = false;
             // 
             // bus5
             // 
-            this.bus5.Location = new System.Drawing.Point(249, 66);
-            this.bus5.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.bus5.Location = new System.Drawing.Point(117, 32);
+            this.bus5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bus5.Name = "bus5";
-            this.bus5.Size = new System.Drawing.Size(47, 76);
+            this.bus5.Size = new System.Drawing.Size(22, 37);
             this.bus5.TabIndex = 19;
             this.bus5.TabStop = false;
             // 
             // bus4
             // 
-            this.bus4.Location = new System.Drawing.Point(193, 66);
-            this.bus4.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.bus4.Location = new System.Drawing.Point(91, 32);
+            this.bus4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bus4.Name = "bus4";
-            this.bus4.Size = new System.Drawing.Size(47, 76);
+            this.bus4.Size = new System.Drawing.Size(22, 37);
             this.bus4.TabIndex = 18;
             this.bus4.TabStop = false;
             // 
             // bus3
             // 
-            this.bus3.Location = new System.Drawing.Point(140, 66);
-            this.bus3.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.bus3.Location = new System.Drawing.Point(66, 32);
+            this.bus3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bus3.Name = "bus3";
-            this.bus3.Size = new System.Drawing.Size(47, 76);
+            this.bus3.Size = new System.Drawing.Size(22, 37);
             this.bus3.TabIndex = 17;
             this.bus3.TabStop = false;
             // 
             // bus2
             // 
-            this.bus2.Location = new System.Drawing.Point(87, 66);
-            this.bus2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.bus2.Location = new System.Drawing.Point(41, 32);
+            this.bus2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bus2.Name = "bus2";
-            this.bus2.Size = new System.Drawing.Size(47, 76);
+            this.bus2.Size = new System.Drawing.Size(22, 37);
             this.bus2.TabIndex = 16;
             this.bus2.TabStop = false;
             // 
             // bus1
             // 
-            this.bus1.Location = new System.Drawing.Point(34, 66);
-            this.bus1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.bus1.Location = new System.Drawing.Point(16, 32);
+            this.bus1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bus1.Name = "bus1";
-            this.bus1.Size = new System.Drawing.Size(47, 76);
+            this.bus1.Size = new System.Drawing.Size(22, 37);
             this.bus1.TabIndex = 15;
             this.bus1.TabStop = false;
             // 
@@ -346,11 +346,11 @@ namespace EightBitInterface
             this.ControlGroup.Controls.Add(this.ControlMemIn);
             this.ControlGroup.Controls.Add(this.ControlMemAddrIn);
             this.ControlGroup.Controls.Add(this.ControlHalt);
-            this.ControlGroup.Location = new System.Drawing.Point(1212, 587);
-            this.ControlGroup.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.ControlGroup.Location = new System.Drawing.Point(570, 286);
+            this.ControlGroup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ControlGroup.Name = "ControlGroup";
-            this.ControlGroup.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.ControlGroup.Size = new System.Drawing.Size(1107, 289);
+            this.ControlGroup.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ControlGroup.Size = new System.Drawing.Size(521, 141);
             this.ControlGroup.TabIndex = 23;
             this.ControlGroup.TabStop = false;
             this.ControlGroup.Text = "Control";
@@ -359,20 +359,19 @@ namespace EightBitInterface
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label37.Location = new System.Drawing.Point(1018, 164);
-            this.label37.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label37.Location = new System.Drawing.Point(479, 80);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(68, 64);
+            this.label37.Size = new System.Drawing.Size(34, 30);
             this.label37.TabIndex = 46;
             this.label37.Text = "Flags\r\nIn";
             this.label37.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // ControlFlags
             // 
-            this.ControlFlags.Location = new System.Drawing.Point(1026, 66);
-            this.ControlFlags.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.ControlFlags.Location = new System.Drawing.Point(483, 32);
+            this.ControlFlags.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ControlFlags.Name = "ControlFlags";
-            this.ControlFlags.Size = new System.Drawing.Size(47, 76);
+            this.ControlFlags.Size = new System.Drawing.Size(22, 37);
             this.ControlFlags.TabIndex = 45;
             this.ControlFlags.TabStop = false;
             // 
@@ -380,10 +379,9 @@ namespace EightBitInterface
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(948, 164);
-            this.label15.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label15.Location = new System.Drawing.Point(446, 80);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(72, 32);
+            this.label15.Size = new System.Drawing.Size(36, 15);
             this.label15.TabIndex = 44;
             this.label15.Text = "Jump";
             this.label15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -392,10 +390,9 @@ namespace EightBitInterface
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(895, 164);
-            this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label14.Location = new System.Drawing.Point(421, 80);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(54, 64);
+            this.label14.Size = new System.Drawing.Size(27, 30);
             this.label14.TabIndex = 43;
             this.label14.Text = "Ctr\r\nOut";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -404,10 +401,9 @@ namespace EightBitInterface
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(827, 164);
-            this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label13.Location = new System.Drawing.Point(389, 80);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 64);
+            this.label13.Size = new System.Drawing.Size(30, 30);
             this.label13.TabIndex = 42;
             this.label13.Text = "Ctr\r\nEnbl";
             this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -416,10 +412,9 @@ namespace EightBitInterface
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(759, 164);
-            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label12.Location = new System.Drawing.Point(357, 80);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(54, 64);
+            this.label12.Size = new System.Drawing.Size(27, 30);
             this.label12.TabIndex = 41;
             this.label12.Text = "Out\r\nVal";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -428,10 +423,9 @@ namespace EightBitInterface
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(697, 164);
-            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label11.Location = new System.Drawing.Point(328, 80);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 96);
+            this.label11.Size = new System.Drawing.Size(27, 45);
             this.label11.TabIndex = 40;
             this.label11.Text = "B\r\nReg\r\nIn";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -440,10 +434,9 @@ namespace EightBitInterface
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(499, 164);
-            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label10.Location = new System.Drawing.Point(235, 80);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 96);
+            this.label10.Size = new System.Drawing.Size(27, 45);
             this.label10.TabIndex = 39;
             this.label10.Text = "A\r\nReg\r\nOut";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -452,10 +445,9 @@ namespace EightBitInterface
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(363, 164);
-            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label9.Location = new System.Drawing.Point(171, 80);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 96);
+            this.label9.Size = new System.Drawing.Size(27, 45);
             this.label9.TabIndex = 38;
             this.label9.Text = "Inst\r\nReg\r\nIn";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -464,10 +456,9 @@ namespace EightBitInterface
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(149, 164);
-            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label8.Location = new System.Drawing.Point(70, 80);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 96);
+            this.label8.Size = new System.Drawing.Size(35, 45);
             this.label8.TabIndex = 37;
             this.label8.Text = "Mem\r\nData\r\nIn";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -476,10 +467,9 @@ namespace EightBitInterface
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(217, 164);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label7.Location = new System.Drawing.Point(102, 80);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 96);
+            this.label7.Size = new System.Drawing.Size(35, 45);
             this.label7.TabIndex = 36;
             this.label7.Text = "Mem\r\nData\r\nOut";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -488,10 +478,9 @@ namespace EightBitInterface
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(295, 164);
-            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label6.Location = new System.Drawing.Point(139, 80);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 96);
+            this.label6.Size = new System.Drawing.Size(27, 45);
             this.label6.TabIndex = 35;
             this.label6.Text = "Inst\r\nReg\r\nOut";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -500,10 +489,9 @@ namespace EightBitInterface
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(427, 164);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Location = new System.Drawing.Point(201, 80);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 96);
+            this.label5.Size = new System.Drawing.Size(27, 45);
             this.label5.TabIndex = 34;
             this.label5.Text = "A\r\nReg\r\nIn";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -512,10 +500,9 @@ namespace EightBitInterface
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(623, 164);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Location = new System.Drawing.Point(293, 80);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 96);
+            this.label4.Size = new System.Drawing.Size(32, 45);
             this.label4.TabIndex = 33;
             this.label4.Text = "ALU\r\nSub-\r\ntract";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -524,10 +511,9 @@ namespace EightBitInterface
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(559, 164);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(263, 80);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 64);
+            this.label3.Size = new System.Drawing.Size(29, 30);
             this.label3.TabIndex = 32;
             this.label3.Text = "ALU\r\nOut";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -536,10 +522,9 @@ namespace EightBitInterface
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(83, 164);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(39, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 96);
+            this.label2.Size = new System.Drawing.Size(35, 45);
             this.label2.TabIndex = 31;
             this.label2.Text = "Mem\r\nAddr\r\nIn";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -548,157 +533,156 @@ namespace EightBitInterface
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(19, 164);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(9, 80);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 32);
+            this.label1.Size = new System.Drawing.Size(29, 15);
             this.label1.TabIndex = 30;
             this.label1.Text = "Halt";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // ControlJump
             // 
-            this.ControlJump.Location = new System.Drawing.Point(963, 66);
-            this.ControlJump.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.ControlJump.Location = new System.Drawing.Point(453, 32);
+            this.ControlJump.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ControlJump.Name = "ControlJump";
-            this.ControlJump.Size = new System.Drawing.Size(47, 76);
+            this.ControlJump.Size = new System.Drawing.Size(22, 37);
             this.ControlJump.TabIndex = 29;
             this.ControlJump.TabStop = false;
             // 
             // ControlCounterOut
             // 
-            this.ControlCounterOut.Location = new System.Drawing.Point(895, 66);
-            this.ControlCounterOut.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.ControlCounterOut.Location = new System.Drawing.Point(421, 32);
+            this.ControlCounterOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ControlCounterOut.Name = "ControlCounterOut";
-            this.ControlCounterOut.Size = new System.Drawing.Size(47, 76);
+            this.ControlCounterOut.Size = new System.Drawing.Size(22, 37);
             this.ControlCounterOut.TabIndex = 28;
             this.ControlCounterOut.TabStop = false;
             // 
             // ControlCounterEnable
             // 
-            this.ControlCounterEnable.Location = new System.Drawing.Point(829, 66);
-            this.ControlCounterEnable.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.ControlCounterEnable.Location = new System.Drawing.Point(390, 32);
+            this.ControlCounterEnable.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ControlCounterEnable.Name = "ControlCounterEnable";
-            this.ControlCounterEnable.Size = new System.Drawing.Size(47, 76);
+            this.ControlCounterEnable.Size = new System.Drawing.Size(22, 37);
             this.ControlCounterEnable.TabIndex = 27;
             this.ControlCounterEnable.TabStop = false;
             // 
             // ControlOutVal
             // 
-            this.ControlOutVal.Location = new System.Drawing.Point(763, 66);
-            this.ControlOutVal.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.ControlOutVal.Location = new System.Drawing.Point(359, 32);
+            this.ControlOutVal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ControlOutVal.Name = "ControlOutVal";
-            this.ControlOutVal.Size = new System.Drawing.Size(47, 76);
+            this.ControlOutVal.Size = new System.Drawing.Size(22, 37);
             this.ControlOutVal.TabIndex = 26;
             this.ControlOutVal.TabStop = false;
             // 
             // ControlBRegIn
             // 
-            this.ControlBRegIn.Location = new System.Drawing.Point(695, 66);
-            this.ControlBRegIn.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.ControlBRegIn.Location = new System.Drawing.Point(327, 32);
+            this.ControlBRegIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ControlBRegIn.Name = "ControlBRegIn";
-            this.ControlBRegIn.Size = new System.Drawing.Size(47, 76);
+            this.ControlBRegIn.Size = new System.Drawing.Size(22, 37);
             this.ControlBRegIn.TabIndex = 25;
             this.ControlBRegIn.TabStop = false;
             // 
             // ControlALUSubtract
             // 
-            this.ControlALUSubtract.Location = new System.Drawing.Point(629, 66);
-            this.ControlALUSubtract.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.ControlALUSubtract.Location = new System.Drawing.Point(296, 32);
+            this.ControlALUSubtract.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ControlALUSubtract.Name = "ControlALUSubtract";
-            this.ControlALUSubtract.Size = new System.Drawing.Size(47, 76);
+            this.ControlALUSubtract.Size = new System.Drawing.Size(22, 37);
             this.ControlALUSubtract.TabIndex = 24;
             this.ControlALUSubtract.TabStop = false;
             // 
             // ControlALUOUT
             // 
-            this.ControlALUOUT.Location = new System.Drawing.Point(563, 66);
-            this.ControlALUOUT.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.ControlALUOUT.Location = new System.Drawing.Point(265, 32);
+            this.ControlALUOUT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ControlALUOUT.Name = "ControlALUOUT";
-            this.ControlALUOUT.Size = new System.Drawing.Size(47, 76);
+            this.ControlALUOUT.Size = new System.Drawing.Size(22, 37);
             this.ControlALUOUT.TabIndex = 23;
             this.ControlALUOUT.TabStop = false;
             // 
             // ControlARegOut
             // 
-            this.ControlARegOut.Location = new System.Drawing.Point(497, 66);
-            this.ControlARegOut.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.ControlARegOut.Location = new System.Drawing.Point(234, 32);
+            this.ControlARegOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ControlARegOut.Name = "ControlARegOut";
-            this.ControlARegOut.Size = new System.Drawing.Size(47, 76);
+            this.ControlARegOut.Size = new System.Drawing.Size(22, 37);
             this.ControlARegOut.TabIndex = 22;
             this.ControlARegOut.TabStop = false;
             // 
             // ControlARegIn
             // 
-            this.ControlARegIn.Location = new System.Drawing.Point(431, 66);
-            this.ControlARegIn.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.ControlARegIn.Location = new System.Drawing.Point(203, 32);
+            this.ControlARegIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ControlARegIn.Name = "ControlARegIn";
-            this.ControlARegIn.Size = new System.Drawing.Size(47, 76);
+            this.ControlARegIn.Size = new System.Drawing.Size(22, 37);
             this.ControlARegIn.TabIndex = 21;
             this.ControlARegIn.TabStop = false;
             // 
             // ControlInstRegIn
             // 
-            this.ControlInstRegIn.Location = new System.Drawing.Point(363, 66);
-            this.ControlInstRegIn.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.ControlInstRegIn.Location = new System.Drawing.Point(171, 32);
+            this.ControlInstRegIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ControlInstRegIn.Name = "ControlInstRegIn";
-            this.ControlInstRegIn.Size = new System.Drawing.Size(47, 76);
+            this.ControlInstRegIn.Size = new System.Drawing.Size(22, 37);
             this.ControlInstRegIn.TabIndex = 20;
             this.ControlInstRegIn.TabStop = false;
             // 
             // ControlInstRegOut
             // 
-            this.ControlInstRegOut.Location = new System.Drawing.Point(300, 66);
-            this.ControlInstRegOut.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.ControlInstRegOut.Location = new System.Drawing.Point(141, 32);
+            this.ControlInstRegOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ControlInstRegOut.Name = "ControlInstRegOut";
-            this.ControlInstRegOut.Size = new System.Drawing.Size(47, 76);
+            this.ControlInstRegOut.Size = new System.Drawing.Size(22, 37);
             this.ControlInstRegOut.TabIndex = 19;
             this.ControlInstRegOut.TabStop = false;
             // 
             // ControlMemOut
             // 
-            this.ControlMemOut.Location = new System.Drawing.Point(232, 66);
-            this.ControlMemOut.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.ControlMemOut.Location = new System.Drawing.Point(109, 32);
+            this.ControlMemOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ControlMemOut.Name = "ControlMemOut";
-            this.ControlMemOut.Size = new System.Drawing.Size(47, 76);
+            this.ControlMemOut.Size = new System.Drawing.Size(22, 37);
             this.ControlMemOut.TabIndex = 18;
             this.ControlMemOut.TabStop = false;
             // 
             // ControlMemIn
             // 
-            this.ControlMemIn.Location = new System.Drawing.Point(166, 66);
-            this.ControlMemIn.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.ControlMemIn.Location = new System.Drawing.Point(78, 32);
+            this.ControlMemIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ControlMemIn.Name = "ControlMemIn";
-            this.ControlMemIn.Size = new System.Drawing.Size(47, 76);
+            this.ControlMemIn.Size = new System.Drawing.Size(22, 37);
             this.ControlMemIn.TabIndex = 17;
             this.ControlMemIn.TabStop = false;
             // 
             // ControlMemAddrIn
             // 
-            this.ControlMemAddrIn.Location = new System.Drawing.Point(100, 66);
-            this.ControlMemAddrIn.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.ControlMemAddrIn.Location = new System.Drawing.Point(47, 32);
+            this.ControlMemAddrIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ControlMemAddrIn.Name = "ControlMemAddrIn";
-            this.ControlMemAddrIn.Size = new System.Drawing.Size(47, 76);
+            this.ControlMemAddrIn.Size = new System.Drawing.Size(22, 37);
             this.ControlMemAddrIn.TabIndex = 16;
             this.ControlMemAddrIn.TabStop = false;
             // 
             // ControlHalt
             // 
-            this.ControlHalt.Location = new System.Drawing.Point(34, 66);
-            this.ControlHalt.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.ControlHalt.Location = new System.Drawing.Point(16, 32);
+            this.ControlHalt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ControlHalt.Name = "ControlHalt";
-            this.ControlHalt.Size = new System.Drawing.Size(47, 76);
+            this.ControlHalt.Size = new System.Drawing.Size(22, 37);
             this.ControlHalt.TabIndex = 15;
             this.ControlHalt.TabStop = false;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.OutputLabel);
-            this.groupBox1.Location = new System.Drawing.Point(1278, 64);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.groupBox1.Location = new System.Drawing.Point(601, 31);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.groupBox1.Size = new System.Drawing.Size(487, 273);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(229, 133);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Output";
@@ -706,10 +690,9 @@ namespace EightBitInterface
             // OutputLabel
             // 
             this.OutputLabel.Font = new System.Drawing.Font("Consolas", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.OutputLabel.Location = new System.Drawing.Point(19, 41);
-            this.OutputLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.OutputLabel.Location = new System.Drawing.Point(9, 20);
             this.OutputLabel.Name = "OutputLabel";
-            this.OutputLabel.Size = new System.Drawing.Size(421, 215);
+            this.OutputLabel.Size = new System.Drawing.Size(198, 105);
             this.OutputLabel.TabIndex = 0;
             this.OutputLabel.Text = "0";
             this.OutputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -773,11 +756,11 @@ namespace EightBitInterface
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.Mem0000);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox2.Location = new System.Drawing.Point(1231, 895);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.groupBox2.Location = new System.Drawing.Point(579, 437);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.groupBox2.Size = new System.Drawing.Size(1117, 879);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(526, 429);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Program (Populate RAM)";
@@ -786,10 +769,9 @@ namespace EightBitInterface
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label38.Location = new System.Drawing.Point(662, 0);
-            this.label38.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label38.Location = new System.Drawing.Point(312, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(70, 32);
+            this.label38.Size = new System.Drawing.Size(36, 15);
             this.label38.TabIndex = 58;
             this.label38.Text = "Load:";
             // 
@@ -798,9 +780,10 @@ namespace EightBitInterface
             this.loadSetCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.loadSetCombo.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.loadSetCombo.FormattingEnabled = true;
-            this.loadSetCombo.Location = new System.Drawing.Point(732, 0);
+            this.loadSetCombo.Location = new System.Drawing.Point(344, 0);
+            this.loadSetCombo.Margin = new System.Windows.Forms.Padding(1);
             this.loadSetCombo.Name = "loadSetCombo";
-            this.loadSetCombo.Size = new System.Drawing.Size(347, 39);
+            this.loadSetCombo.Size = new System.Drawing.Size(165, 23);
             this.loadSetCombo.TabIndex = 57;
             this.loadSetCombo.SelectedIndexChanged += new System.EventHandler(this.loadSetCombo_SelectedIndexChanged);
             // 
@@ -809,10 +792,9 @@ namespace EightBitInterface
             this.code1001.AutoSize = true;
             this.code1001.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.code1001.ForeColor = System.Drawing.Color.Blue;
-            this.code1001.Location = new System.Drawing.Point(778, 213);
-            this.code1001.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.code1001.Location = new System.Drawing.Point(366, 104);
             this.code1001.Name = "code1001";
-            this.code1001.Size = new System.Drawing.Size(66, 32);
+            this.code1001.Size = new System.Drawing.Size(31, 15);
             this.code1001.TabIndex = 56;
             this.code1001.Text = "0000";
             this.code1001.Click += new System.EventHandler(this.code1001_Click);
@@ -822,10 +804,9 @@ namespace EightBitInterface
             this.code1010.AutoSize = true;
             this.code1010.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.code1010.ForeColor = System.Drawing.Color.Blue;
-            this.code1010.Location = new System.Drawing.Point(778, 297);
-            this.code1010.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.code1010.Location = new System.Drawing.Point(366, 145);
             this.code1010.Name = "code1010";
-            this.code1010.Size = new System.Drawing.Size(66, 32);
+            this.code1010.Size = new System.Drawing.Size(31, 15);
             this.code1010.TabIndex = 55;
             this.code1010.Text = "0000";
             this.code1010.Click += new System.EventHandler(this.code1010_Click);
@@ -835,10 +816,9 @@ namespace EightBitInterface
             this.code1011.AutoSize = true;
             this.code1011.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.code1011.ForeColor = System.Drawing.Color.Blue;
-            this.code1011.Location = new System.Drawing.Point(778, 367);
-            this.code1011.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.code1011.Location = new System.Drawing.Point(366, 179);
             this.code1011.Name = "code1011";
-            this.code1011.Size = new System.Drawing.Size(66, 32);
+            this.code1011.Size = new System.Drawing.Size(31, 15);
             this.code1011.TabIndex = 54;
             this.code1011.Text = "0000";
             this.code1011.Click += new System.EventHandler(this.code1011_Click);
@@ -848,10 +828,9 @@ namespace EightBitInterface
             this.code1100.AutoSize = true;
             this.code1100.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.code1100.ForeColor = System.Drawing.Color.Blue;
-            this.code1100.Location = new System.Drawing.Point(778, 449);
-            this.code1100.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.code1100.Location = new System.Drawing.Point(366, 219);
             this.code1100.Name = "code1100";
-            this.code1100.Size = new System.Drawing.Size(66, 32);
+            this.code1100.Size = new System.Drawing.Size(31, 15);
             this.code1100.TabIndex = 53;
             this.code1100.Text = "0000";
             this.code1100.Click += new System.EventHandler(this.code1100_Click);
@@ -861,10 +840,9 @@ namespace EightBitInterface
             this.code1101.AutoSize = true;
             this.code1101.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.code1101.ForeColor = System.Drawing.Color.Blue;
-            this.code1101.Location = new System.Drawing.Point(778, 527);
-            this.code1101.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.code1101.Location = new System.Drawing.Point(366, 257);
             this.code1101.Name = "code1101";
-            this.code1101.Size = new System.Drawing.Size(66, 32);
+            this.code1101.Size = new System.Drawing.Size(31, 15);
             this.code1101.TabIndex = 52;
             this.code1101.Text = "0000";
             this.code1101.Click += new System.EventHandler(this.code1101_Click);
@@ -874,10 +852,9 @@ namespace EightBitInterface
             this.code1110.AutoSize = true;
             this.code1110.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.code1110.ForeColor = System.Drawing.Color.Blue;
-            this.code1110.Location = new System.Drawing.Point(778, 605);
-            this.code1110.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.code1110.Location = new System.Drawing.Point(366, 295);
             this.code1110.Name = "code1110";
-            this.code1110.Size = new System.Drawing.Size(66, 32);
+            this.code1110.Size = new System.Drawing.Size(31, 15);
             this.code1110.TabIndex = 51;
             this.code1110.Text = "0000";
             this.code1110.Click += new System.EventHandler(this.code1110_Click);
@@ -887,10 +864,9 @@ namespace EightBitInterface
             this.code1111.AutoSize = true;
             this.code1111.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.code1111.ForeColor = System.Drawing.Color.Blue;
-            this.code1111.Location = new System.Drawing.Point(778, 681);
-            this.code1111.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.code1111.Location = new System.Drawing.Point(366, 332);
             this.code1111.Name = "code1111";
-            this.code1111.Size = new System.Drawing.Size(66, 32);
+            this.code1111.Size = new System.Drawing.Size(31, 15);
             this.code1111.TabIndex = 50;
             this.code1111.Text = "0000";
             this.code1111.Click += new System.EventHandler(this.code1111_Click);
@@ -900,10 +876,9 @@ namespace EightBitInterface
             this.code1000.AutoSize = true;
             this.code1000.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.code1000.ForeColor = System.Drawing.Color.Blue;
-            this.code1000.Location = new System.Drawing.Point(778, 146);
-            this.code1000.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.code1000.Location = new System.Drawing.Point(366, 71);
             this.code1000.Name = "code1000";
-            this.code1000.Size = new System.Drawing.Size(66, 32);
+            this.code1000.Size = new System.Drawing.Size(31, 15);
             this.code1000.TabIndex = 49;
             this.code1000.Text = "0000";
             this.code1000.Click += new System.EventHandler(this.code1000_Click);
@@ -913,10 +888,9 @@ namespace EightBitInterface
             this.code0001.AutoSize = true;
             this.code0001.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.code0001.ForeColor = System.Drawing.Color.Blue;
-            this.code0001.Location = new System.Drawing.Point(338, 207);
-            this.code0001.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.code0001.Location = new System.Drawing.Point(159, 101);
             this.code0001.Name = "code0001";
-            this.code0001.Size = new System.Drawing.Size(66, 32);
+            this.code0001.Size = new System.Drawing.Size(31, 15);
             this.code0001.TabIndex = 48;
             this.code0001.Text = "0000";
             this.code0001.Click += new System.EventHandler(this.code0001_Click);
@@ -926,10 +900,9 @@ namespace EightBitInterface
             this.code0010.AutoSize = true;
             this.code0010.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.code0010.ForeColor = System.Drawing.Color.Blue;
-            this.code0010.Location = new System.Drawing.Point(338, 293);
-            this.code0010.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.code0010.Location = new System.Drawing.Point(159, 143);
             this.code0010.Name = "code0010";
-            this.code0010.Size = new System.Drawing.Size(66, 32);
+            this.code0010.Size = new System.Drawing.Size(31, 15);
             this.code0010.TabIndex = 47;
             this.code0010.Text = "0000";
             this.code0010.Click += new System.EventHandler(this.code0010_Click);
@@ -939,10 +912,9 @@ namespace EightBitInterface
             this.code0011.AutoSize = true;
             this.code0011.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.code0011.ForeColor = System.Drawing.Color.Blue;
-            this.code0011.Location = new System.Drawing.Point(338, 361);
-            this.code0011.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.code0011.Location = new System.Drawing.Point(159, 176);
             this.code0011.Name = "code0011";
-            this.code0011.Size = new System.Drawing.Size(66, 32);
+            this.code0011.Size = new System.Drawing.Size(31, 15);
             this.code0011.TabIndex = 46;
             this.code0011.Text = "0000";
             this.code0011.Click += new System.EventHandler(this.code0011_Click);
@@ -952,10 +924,9 @@ namespace EightBitInterface
             this.code0100.AutoSize = true;
             this.code0100.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.code0100.ForeColor = System.Drawing.Color.Blue;
-            this.code0100.Location = new System.Drawing.Point(338, 443);
-            this.code0100.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.code0100.Location = new System.Drawing.Point(159, 216);
             this.code0100.Name = "code0100";
-            this.code0100.Size = new System.Drawing.Size(66, 32);
+            this.code0100.Size = new System.Drawing.Size(31, 15);
             this.code0100.TabIndex = 45;
             this.code0100.Text = "0000";
             this.code0100.Click += new System.EventHandler(this.code0100_Click);
@@ -965,10 +936,9 @@ namespace EightBitInterface
             this.code0101.AutoSize = true;
             this.code0101.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.code0101.ForeColor = System.Drawing.Color.Blue;
-            this.code0101.Location = new System.Drawing.Point(338, 523);
-            this.code0101.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.code0101.Location = new System.Drawing.Point(159, 255);
             this.code0101.Name = "code0101";
-            this.code0101.Size = new System.Drawing.Size(66, 32);
+            this.code0101.Size = new System.Drawing.Size(31, 15);
             this.code0101.TabIndex = 44;
             this.code0101.Text = "0000";
             this.code0101.Click += new System.EventHandler(this.code0101_Click);
@@ -978,10 +948,9 @@ namespace EightBitInterface
             this.code0110.AutoSize = true;
             this.code0110.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.code0110.ForeColor = System.Drawing.Color.Blue;
-            this.code0110.Location = new System.Drawing.Point(338, 599);
-            this.code0110.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.code0110.Location = new System.Drawing.Point(159, 292);
             this.code0110.Name = "code0110";
-            this.code0110.Size = new System.Drawing.Size(66, 32);
+            this.code0110.Size = new System.Drawing.Size(31, 15);
             this.code0110.TabIndex = 43;
             this.code0110.Text = "0000";
             this.code0110.Click += new System.EventHandler(this.code0110_Click);
@@ -991,10 +960,9 @@ namespace EightBitInterface
             this.code0111.AutoSize = true;
             this.code0111.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.code0111.ForeColor = System.Drawing.Color.Blue;
-            this.code0111.Location = new System.Drawing.Point(338, 674);
-            this.code0111.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.code0111.Location = new System.Drawing.Point(159, 329);
             this.code0111.Name = "code0111";
-            this.code0111.Size = new System.Drawing.Size(66, 32);
+            this.code0111.Size = new System.Drawing.Size(31, 15);
             this.code0111.TabIndex = 42;
             this.code0111.Text = "0000";
             this.code0111.Click += new System.EventHandler(this.code0111_Click);
@@ -1004,10 +972,9 @@ namespace EightBitInterface
             this.code0000.AutoSize = true;
             this.code0000.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.code0000.ForeColor = System.Drawing.Color.Blue;
-            this.code0000.Location = new System.Drawing.Point(338, 139);
-            this.code0000.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.code0000.Location = new System.Drawing.Point(159, 68);
             this.code0000.Name = "code0000";
-            this.code0000.Size = new System.Drawing.Size(66, 32);
+            this.code0000.Size = new System.Drawing.Size(31, 15);
             this.code0000.TabIndex = 40;
             this.code0000.Text = "0000";
             this.code0000.Click += new System.EventHandler(this.code0000_Click);
@@ -1016,10 +983,9 @@ namespace EightBitInterface
             // 
             this.label36.AutoSize = true;
             this.label36.ForeColor = System.Drawing.Color.DimGray;
-            this.label36.Location = new System.Drawing.Point(944, 86);
-            this.label36.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label36.Location = new System.Drawing.Point(444, 42);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(159, 697);
+            this.label36.Size = new System.Drawing.Size(81, 340);
             this.label36.TabIndex = 39;
             this.label36.Text = "Op Codes\r\n\r\n0001  LDA\r\n0010  ADD\r\n0011  SUB\r\n0100  STA\r\n0101  LDI\r\n0110  JMP\r\n011" +
     "1  JC\r\n1000  JZ\r\n1001   -\r\n1010   -\r\n1011   -\r\n1100   -\r\n1101   -\r\n1110  OUT\r\n11" +
@@ -1027,10 +993,10 @@ namespace EightBitInterface
             // 
             // ProgramRAMButton
             // 
-            this.ProgramRAMButton.Location = new System.Drawing.Point(53, 777);
-            this.ProgramRAMButton.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.ProgramRAMButton.Location = new System.Drawing.Point(25, 379);
+            this.ProgramRAMButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ProgramRAMButton.Name = "ProgramRAMButton";
-            this.ProgramRAMButton.Size = new System.Drawing.Size(784, 64);
+            this.ProgramRAMButton.Size = new System.Drawing.Size(369, 31);
             this.ProgramRAMButton.TabIndex = 23;
             this.ProgramRAMButton.Text = "Program";
             this.ProgramRAMButton.UseVisualStyleBackColor = true;
@@ -1038,11 +1004,11 @@ namespace EightBitInterface
             // 
             // Mem1001
             // 
-            this.Mem1001.Location = new System.Drawing.Point(610, 207);
-            this.Mem1001.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Mem1001.Location = new System.Drawing.Point(287, 101);
+            this.Mem1001.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Mem1001.MaxLength = 8;
             this.Mem1001.Name = "Mem1001";
-            this.Mem1001.Size = new System.Drawing.Size(151, 47);
+            this.Mem1001.Size = new System.Drawing.Size(73, 27);
             this.Mem1001.TabIndex = 16;
             this.Mem1001.Text = "?";
             this.Mem1001.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1052,11 +1018,11 @@ namespace EightBitInterface
             // 
             // Mem1010
             // 
-            this.Mem1010.Location = new System.Drawing.Point(610, 285);
-            this.Mem1010.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Mem1010.Location = new System.Drawing.Point(287, 139);
+            this.Mem1010.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Mem1010.MaxLength = 8;
             this.Mem1010.Name = "Mem1010";
-            this.Mem1010.Size = new System.Drawing.Size(151, 47);
+            this.Mem1010.Size = new System.Drawing.Size(73, 27);
             this.Mem1010.TabIndex = 17;
             this.Mem1010.Text = "?";
             this.Mem1010.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1066,11 +1032,11 @@ namespace EightBitInterface
             // 
             // Mem1011
             // 
-            this.Mem1011.Location = new System.Drawing.Point(610, 361);
-            this.Mem1011.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Mem1011.Location = new System.Drawing.Point(287, 176);
+            this.Mem1011.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Mem1011.MaxLength = 8;
             this.Mem1011.Name = "Mem1011";
-            this.Mem1011.Size = new System.Drawing.Size(151, 47);
+            this.Mem1011.Size = new System.Drawing.Size(73, 27);
             this.Mem1011.TabIndex = 18;
             this.Mem1011.Text = "?";
             this.Mem1011.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1080,11 +1046,11 @@ namespace EightBitInterface
             // 
             // Mem1100
             // 
-            this.Mem1100.Location = new System.Drawing.Point(610, 437);
-            this.Mem1100.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Mem1100.Location = new System.Drawing.Point(287, 213);
+            this.Mem1100.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Mem1100.MaxLength = 8;
             this.Mem1100.Name = "Mem1100";
-            this.Mem1100.Size = new System.Drawing.Size(151, 47);
+            this.Mem1100.Size = new System.Drawing.Size(73, 27);
             this.Mem1100.TabIndex = 19;
             this.Mem1100.Text = "?";
             this.Mem1100.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1094,11 +1060,11 @@ namespace EightBitInterface
             // 
             // Mem1101
             // 
-            this.Mem1101.Location = new System.Drawing.Point(610, 515);
-            this.Mem1101.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Mem1101.Location = new System.Drawing.Point(287, 251);
+            this.Mem1101.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Mem1101.MaxLength = 8;
             this.Mem1101.Name = "Mem1101";
-            this.Mem1101.Size = new System.Drawing.Size(151, 47);
+            this.Mem1101.Size = new System.Drawing.Size(73, 27);
             this.Mem1101.TabIndex = 20;
             this.Mem1101.Text = "?";
             this.Mem1101.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1108,11 +1074,11 @@ namespace EightBitInterface
             // 
             // Mem1110
             // 
-            this.Mem1110.Location = new System.Drawing.Point(610, 590);
-            this.Mem1110.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Mem1110.Location = new System.Drawing.Point(287, 288);
+            this.Mem1110.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Mem1110.MaxLength = 8;
             this.Mem1110.Name = "Mem1110";
-            this.Mem1110.Size = new System.Drawing.Size(151, 47);
+            this.Mem1110.Size = new System.Drawing.Size(73, 27);
             this.Mem1110.TabIndex = 21;
             this.Mem1110.Text = "?";
             this.Mem1110.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1122,11 +1088,11 @@ namespace EightBitInterface
             // 
             // Mem1111
             // 
-            this.Mem1111.Location = new System.Drawing.Point(610, 666);
-            this.Mem1111.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Mem1111.Location = new System.Drawing.Point(287, 325);
+            this.Mem1111.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Mem1111.MaxLength = 8;
             this.Mem1111.Name = "Mem1111";
-            this.Mem1111.Size = new System.Drawing.Size(151, 47);
+            this.Mem1111.Size = new System.Drawing.Size(73, 27);
             this.Mem1111.TabIndex = 22;
             this.Mem1111.Text = "?";
             this.Mem1111.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1137,110 +1103,100 @@ namespace EightBitInterface
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(610, 68);
-            this.label19.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label19.Location = new System.Drawing.Point(287, 33);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(173, 41);
+            this.label19.Size = new System.Drawing.Size(86, 20);
             this.label19.TabIndex = 30;
             this.label19.Text = "Value to set";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(493, 215);
-            this.label27.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label27.Location = new System.Drawing.Point(232, 105);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(82, 41);
+            this.label27.Size = new System.Drawing.Size(41, 20);
             this.label27.TabIndex = 29;
             this.label27.Text = "1001";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(493, 293);
-            this.label28.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label28.Location = new System.Drawing.Point(232, 143);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(82, 41);
+            this.label28.Size = new System.Drawing.Size(41, 20);
             this.label28.TabIndex = 28;
             this.label28.Text = "1010";
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(493, 369);
-            this.label29.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label29.Location = new System.Drawing.Point(232, 180);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(82, 41);
+            this.label29.Size = new System.Drawing.Size(41, 20);
             this.label29.TabIndex = 27;
             this.label29.Text = "1011";
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(493, 445);
-            this.label30.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label30.Location = new System.Drawing.Point(232, 217);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(82, 41);
+            this.label30.Size = new System.Drawing.Size(41, 20);
             this.label30.TabIndex = 26;
             this.label30.Text = "1100";
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(493, 523);
-            this.label31.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label31.Location = new System.Drawing.Point(232, 255);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(82, 41);
+            this.label31.Size = new System.Drawing.Size(41, 20);
             this.label31.TabIndex = 25;
             this.label31.Text = "1101";
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(493, 599);
-            this.label32.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label32.Location = new System.Drawing.Point(232, 292);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(82, 41);
+            this.label32.Size = new System.Drawing.Size(41, 20);
             this.label32.TabIndex = 24;
             this.label32.Text = "1110";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(493, 674);
-            this.label33.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label33.Location = new System.Drawing.Point(232, 329);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(82, 41);
+            this.label33.Size = new System.Drawing.Size(41, 20);
             this.label33.TabIndex = 23;
             this.label33.Text = "1111";
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(461, 68);
-            this.label34.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label34.Location = new System.Drawing.Point(217, 33);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(125, 41);
+            this.label34.Size = new System.Drawing.Size(62, 20);
             this.label34.TabIndex = 22;
             this.label34.Text = "Address";
             // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(493, 139);
-            this.label35.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label35.Location = new System.Drawing.Point(232, 68);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(82, 41);
+            this.label35.Size = new System.Drawing.Size(41, 20);
             this.label35.TabIndex = 21;
             this.label35.Text = "1000";
             // 
             // Mem1000
             // 
-            this.Mem1000.Location = new System.Drawing.Point(610, 131);
-            this.Mem1000.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Mem1000.Location = new System.Drawing.Point(287, 64);
+            this.Mem1000.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Mem1000.MaxLength = 8;
             this.Mem1000.Name = "Mem1000";
-            this.Mem1000.Size = new System.Drawing.Size(151, 47);
+            this.Mem1000.Size = new System.Drawing.Size(73, 27);
             this.Mem1000.TabIndex = 15;
             this.Mem1000.Text = "?";
             this.Mem1000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1250,11 +1206,11 @@ namespace EightBitInterface
             // 
             // Mem0001
             // 
-            this.Mem0001.Location = new System.Drawing.Point(170, 207);
-            this.Mem0001.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Mem0001.Location = new System.Drawing.Point(80, 101);
+            this.Mem0001.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Mem0001.MaxLength = 8;
             this.Mem0001.Name = "Mem0001";
-            this.Mem0001.Size = new System.Drawing.Size(151, 47);
+            this.Mem0001.Size = new System.Drawing.Size(73, 27);
             this.Mem0001.TabIndex = 8;
             this.Mem0001.Text = "?";
             this.Mem0001.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1264,11 +1220,11 @@ namespace EightBitInterface
             // 
             // Mem0010
             // 
-            this.Mem0010.Location = new System.Drawing.Point(170, 285);
-            this.Mem0010.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Mem0010.Location = new System.Drawing.Point(80, 139);
+            this.Mem0010.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Mem0010.MaxLength = 8;
             this.Mem0010.Name = "Mem0010";
-            this.Mem0010.Size = new System.Drawing.Size(151, 47);
+            this.Mem0010.Size = new System.Drawing.Size(73, 27);
             this.Mem0010.TabIndex = 9;
             this.Mem0010.Text = "?";
             this.Mem0010.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1278,11 +1234,11 @@ namespace EightBitInterface
             // 
             // Mem0011
             // 
-            this.Mem0011.Location = new System.Drawing.Point(170, 361);
-            this.Mem0011.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Mem0011.Location = new System.Drawing.Point(80, 176);
+            this.Mem0011.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Mem0011.MaxLength = 8;
             this.Mem0011.Name = "Mem0011";
-            this.Mem0011.Size = new System.Drawing.Size(151, 47);
+            this.Mem0011.Size = new System.Drawing.Size(73, 27);
             this.Mem0011.TabIndex = 10;
             this.Mem0011.Text = "?";
             this.Mem0011.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1292,11 +1248,11 @@ namespace EightBitInterface
             // 
             // Mem0100
             // 
-            this.Mem0100.Location = new System.Drawing.Point(170, 437);
-            this.Mem0100.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Mem0100.Location = new System.Drawing.Point(80, 213);
+            this.Mem0100.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Mem0100.MaxLength = 8;
             this.Mem0100.Name = "Mem0100";
-            this.Mem0100.Size = new System.Drawing.Size(151, 47);
+            this.Mem0100.Size = new System.Drawing.Size(73, 27);
             this.Mem0100.TabIndex = 11;
             this.Mem0100.Text = "?";
             this.Mem0100.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1306,11 +1262,11 @@ namespace EightBitInterface
             // 
             // Mem0101
             // 
-            this.Mem0101.Location = new System.Drawing.Point(170, 515);
-            this.Mem0101.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Mem0101.Location = new System.Drawing.Point(80, 251);
+            this.Mem0101.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Mem0101.MaxLength = 8;
             this.Mem0101.Name = "Mem0101";
-            this.Mem0101.Size = new System.Drawing.Size(151, 47);
+            this.Mem0101.Size = new System.Drawing.Size(73, 27);
             this.Mem0101.TabIndex = 12;
             this.Mem0101.Text = "?";
             this.Mem0101.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1320,11 +1276,11 @@ namespace EightBitInterface
             // 
             // Mem0110
             // 
-            this.Mem0110.Location = new System.Drawing.Point(170, 590);
-            this.Mem0110.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Mem0110.Location = new System.Drawing.Point(80, 288);
+            this.Mem0110.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Mem0110.MaxLength = 8;
             this.Mem0110.Name = "Mem0110";
-            this.Mem0110.Size = new System.Drawing.Size(151, 47);
+            this.Mem0110.Size = new System.Drawing.Size(73, 27);
             this.Mem0110.TabIndex = 13;
             this.Mem0110.Text = "?";
             this.Mem0110.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1334,11 +1290,11 @@ namespace EightBitInterface
             // 
             // Mem0111
             // 
-            this.Mem0111.Location = new System.Drawing.Point(170, 666);
-            this.Mem0111.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Mem0111.Location = new System.Drawing.Point(80, 325);
+            this.Mem0111.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Mem0111.MaxLength = 8;
             this.Mem0111.Name = "Mem0111";
-            this.Mem0111.Size = new System.Drawing.Size(151, 47);
+            this.Mem0111.Size = new System.Drawing.Size(73, 27);
             this.Mem0111.TabIndex = 14;
             this.Mem0111.Text = "?";
             this.Mem0111.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1349,110 +1305,100 @@ namespace EightBitInterface
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(170, 68);
-            this.label18.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label18.Location = new System.Drawing.Point(80, 33);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(173, 41);
+            this.label18.Size = new System.Drawing.Size(86, 20);
             this.label18.TabIndex = 12;
             this.label18.Text = "Value to set";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(53, 215);
-            this.label26.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label26.Location = new System.Drawing.Point(25, 105);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(82, 41);
+            this.label26.Size = new System.Drawing.Size(41, 20);
             this.label26.TabIndex = 11;
             this.label26.Text = "0001";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(53, 293);
-            this.label25.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label25.Location = new System.Drawing.Point(25, 143);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(82, 41);
+            this.label25.Size = new System.Drawing.Size(41, 20);
             this.label25.TabIndex = 10;
             this.label25.Text = "0010";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(53, 369);
-            this.label24.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label24.Location = new System.Drawing.Point(25, 180);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(82, 41);
+            this.label24.Size = new System.Drawing.Size(41, 20);
             this.label24.TabIndex = 9;
             this.label24.Text = "0011";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(53, 445);
-            this.label23.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label23.Location = new System.Drawing.Point(25, 217);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(82, 41);
+            this.label23.Size = new System.Drawing.Size(41, 20);
             this.label23.TabIndex = 8;
             this.label23.Text = "0100";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(53, 523);
-            this.label22.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label22.Location = new System.Drawing.Point(25, 255);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(82, 41);
+            this.label22.Size = new System.Drawing.Size(41, 20);
             this.label22.TabIndex = 7;
             this.label22.Text = "0101";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(53, 599);
-            this.label21.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label21.Location = new System.Drawing.Point(25, 292);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(82, 41);
+            this.label21.Size = new System.Drawing.Size(41, 20);
             this.label21.TabIndex = 6;
             this.label21.Text = "0110";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(53, 674);
-            this.label20.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label20.Location = new System.Drawing.Point(25, 329);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(82, 41);
+            this.label20.Size = new System.Drawing.Size(41, 20);
             this.label20.TabIndex = 5;
             this.label20.Text = "0111";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(21, 68);
-            this.label17.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label17.Location = new System.Drawing.Point(10, 33);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(125, 41);
+            this.label17.Size = new System.Drawing.Size(62, 20);
             this.label17.TabIndex = 2;
             this.label17.Text = "Address";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(53, 139);
-            this.label16.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label16.Location = new System.Drawing.Point(25, 68);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(82, 41);
+            this.label16.Size = new System.Drawing.Size(41, 20);
             this.label16.TabIndex = 1;
             this.label16.Text = "0000";
             // 
             // Mem0000
             // 
-            this.Mem0000.Location = new System.Drawing.Point(170, 131);
-            this.Mem0000.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Mem0000.Location = new System.Drawing.Point(80, 64);
+            this.Mem0000.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Mem0000.MaxLength = 8;
             this.Mem0000.Name = "Mem0000";
-            this.Mem0000.Size = new System.Drawing.Size(151, 47);
+            this.Mem0000.Size = new System.Drawing.Size(73, 27);
             this.Mem0000.TabIndex = 7;
             this.Mem0000.Text = "?";
             this.Mem0000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1462,10 +1408,10 @@ namespace EightBitInterface
             // 
             // StartMonitorButton
             // 
-            this.StartMonitorButton.Location = new System.Drawing.Point(684, 23);
-            this.StartMonitorButton.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.StartMonitorButton.Location = new System.Drawing.Point(322, 11);
+            this.StartMonitorButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.StartMonitorButton.Name = "StartMonitorButton";
-            this.StartMonitorButton.Size = new System.Drawing.Size(289, 64);
+            this.StartMonitorButton.Size = new System.Drawing.Size(136, 31);
             this.StartMonitorButton.TabIndex = 3;
             this.StartMonitorButton.Text = "Start &Monitor";
             this.StartMonitorButton.UseVisualStyleBackColor = true;
@@ -1474,20 +1420,19 @@ namespace EightBitInterface
             // connectionStatusPictureBox
             // 
             this.connectionStatusPictureBox.BackColor = System.Drawing.Color.Red;
-            this.connectionStatusPictureBox.Location = new System.Drawing.Point(567, 27);
-            this.connectionStatusPictureBox.Margin = new System.Windows.Forms.Padding(2);
+            this.connectionStatusPictureBox.Location = new System.Drawing.Point(267, 13);
+            this.connectionStatusPictureBox.Margin = new System.Windows.Forms.Padding(1);
             this.connectionStatusPictureBox.Name = "connectionStatusPictureBox";
-            this.connectionStatusPictureBox.Size = new System.Drawing.Size(57, 49);
+            this.connectionStatusPictureBox.Size = new System.Drawing.Size(27, 24);
             this.connectionStatusPictureBox.TabIndex = 26;
             this.connectionStatusPictureBox.TabStop = false;
             // 
             // AboutButton
             // 
             this.AboutButton.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AboutButton.Location = new System.Drawing.Point(2287, 15);
-            this.AboutButton.Margin = new System.Windows.Forms.Padding(6);
+            this.AboutButton.Location = new System.Drawing.Point(1053, 7);
             this.AboutButton.Name = "AboutButton";
-            this.AboutButton.Size = new System.Drawing.Size(94, 48);
+            this.AboutButton.Size = new System.Drawing.Size(67, 23);
             this.AboutButton.TabIndex = 27;
             this.AboutButton.Text = "&About";
             this.AboutButton.UseVisualStyleBackColor = true;
@@ -1496,11 +1441,11 @@ namespace EightBitInterface
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.clockLabel);
-            this.groupBox3.Location = new System.Drawing.Point(1830, 64);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.groupBox3.Location = new System.Drawing.Point(861, 31);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.groupBox3.Size = new System.Drawing.Size(487, 273);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox3.Size = new System.Drawing.Size(229, 133);
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Clock";
@@ -1509,10 +1454,9 @@ namespace EightBitInterface
             // 
             this.clockLabel.Font = new System.Drawing.Font("Consolas", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.clockLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.clockLabel.Location = new System.Drawing.Point(19, 41);
-            this.clockLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.clockLabel.Location = new System.Drawing.Point(9, 20);
             this.clockLabel.Name = "clockLabel";
-            this.clockLabel.Size = new System.Drawing.Size(421, 215);
+            this.clockLabel.Size = new System.Drawing.Size(198, 105);
             this.clockLabel.TabIndex = 0;
             this.clockLabel.Text = "0Hz";
             this.clockLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1520,9 +1464,9 @@ namespace EightBitInterface
             // MainForm
             // 
             this.AcceptButton = this.SendButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2406, 1818);
+            this.ClientSize = new System.Drawing.Size(1132, 874);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.AboutButton);
             this.Controls.Add(this.connectionStatusPictureBox);
@@ -1536,7 +1480,7 @@ namespace EightBitInterface
             this.Controls.Add(this.CommandTextbox);
             this.Controls.Add(this.PortsCombo);
             this.Controls.Add(this.ConnectButton);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "MainForm";
             this.Text = "8-bit Computer Interface";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);

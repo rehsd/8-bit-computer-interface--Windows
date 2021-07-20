@@ -167,11 +167,10 @@ namespace EightBitInterface
             try
             {
                 int startingLoc = stmp.IndexOf("Clock:");
-                
-                //int closingLoc = stmp.IndexOf("]");
                 if (startingLoc > 0)
                 {
-                    clockLabel.Text = stmp.Substring(startingLoc + 6, stmp.Length-startingLoc-8) + "Hz";
+                    int closingLoc = stmp.IndexOf('\n', startingLoc);
+                    clockLabel.Text = stmp.Substring(startingLoc + 6, closingLoc-startingLoc-7) + "Hz";
                 }
             }
             catch
