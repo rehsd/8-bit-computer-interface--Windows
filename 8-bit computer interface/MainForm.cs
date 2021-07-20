@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.IO.Ports;
+using System.Configuration;
 
 namespace EightBitInterface
 {
@@ -29,7 +30,12 @@ namespace EightBitInterface
                 {
                     PortsCombo.Items.Add(s);
                 }
-                PortsCombo.SelectedIndex = PortsCombo.Items.Count - 1;
+                PortsCombo.SelectedIndex = 0;
+
+                foreach (string profileSet in ConfigurationManager.AppSettings)
+                {
+                    loadSetCombo.Items.Add(profileSet);
+                }
 
                 bus1.BackColor = Color.LightGray;
                 bus2.BackColor = Color.LightGray;
@@ -165,7 +171,7 @@ namespace EightBitInterface
                 //int closingLoc = stmp.IndexOf("]");
                 if (startingLoc > 0)
                 {
-                    clockLabel.Text = stmp.Substring(startingLoc + 6, stmp.Length-startingLoc-7);
+                    clockLabel.Text = stmp.Substring(startingLoc + 6, stmp.Length-startingLoc-8) + "Hz";
                 }
             }
             catch
@@ -905,6 +911,28 @@ namespace EightBitInterface
             a.Show();
         }
 
-   
+        private void loadSetCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string vals = ConfigurationManager.AppSettings[loadSetCombo.Text];
+            string[] valArray = vals.Split(":");
+            Mem0000.Text = valArray[0];
+            Mem0001.Text = valArray[1];
+            Mem0010.Text = valArray[2];
+            Mem0011.Text = valArray[3];
+            Mem0100.Text = valArray[4];
+            Mem0101.Text = valArray[5];
+            Mem0110.Text = valArray[6];
+            Mem0111.Text = valArray[7];
+            Mem1000.Text = valArray[8];
+            Mem1001.Text = valArray[9];
+            Mem1010.Text = valArray[10];
+            Mem1011.Text = valArray[11];
+            Mem1100.Text = valArray[12];
+            Mem1101.Text = valArray[13];
+            Mem1110.Text = valArray[14];
+            Mem1111.Text = valArray[15];
+        }
+
+ 
     }
 }
