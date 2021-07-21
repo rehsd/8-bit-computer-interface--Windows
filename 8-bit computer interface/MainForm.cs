@@ -16,6 +16,9 @@ namespace EightBitInterface
     public partial class MainForm : Form
     {
         SerialPort myPort;
+        const short MAX_OUTPUT_LINES = 50;
+        const int CONNECTION_RATE = 921600; //Match this to the same const in the Arduino code
+        //const int CONNECTION_RATE = 460800; //Match this to the same const in the Arduino code
 
         public MainForm()
         {
@@ -95,7 +98,7 @@ namespace EightBitInterface
             {
                 if (ConnectButton.Text == "&Connect")
                 {
-                    myPort = new SerialPort(PortsCombo.SelectedItem.ToString(), 115200);
+                    myPort = new SerialPort(PortsCombo.SelectedItem.ToString(), CONNECTION_RATE); 
                     myPort.DataReceived += new SerialDataReceivedEventHandler(MyPort_DataReceived);
                     myPort.ReadTimeout = 2000;
                     myPort.WriteTimeout = 2000;
@@ -131,15 +134,18 @@ namespace EightBitInterface
                 {
                     this.Invoke(new MethodInvoker(delegate
                     {
-                        if (OutputRichtext.Lines.Length > 100)
+                        if (OutputRichtext.Lines.Length > MAX_OUTPUT_LINES)
                         {
                             List<string> lines = OutputRichtext.Lines.ToList();
-                            lines.RemoveAt(0);
+                            //lines.RemoveAt(0);
+                            lines.RemoveRange(0, lines.Count - MAX_OUTPUT_LINES);
                             OutputRichtext.Lines = lines.ToArray();
+
                         }
 
                         string stmp = myPort.ReadExisting();
                         //string stmp = myPort.ReadLine();
+
                         OutputRichtext.Text += stmp;
                         OutputRichtext.SelectionStart = OutputRichtext.Text.Length;
                         OutputRichtext.ScrollToCaret();
@@ -204,9 +210,10 @@ namespace EightBitInterface
             try
             {
                 Color setColor = Color.Blue;
-                if (stmp.Substring(0, 3) == "Bus")
+                int controlStart = stmp.IndexOf("Control");
+                if (controlStart > -1)
                 {
-                    if (stmp.Substring(22, 1) == "1")
+                    if (stmp.Substring(controlStart + 8, 1) == "1")
                     {
                         ControlHalt.BackColor = setColor;
                     }
@@ -215,7 +222,7 @@ namespace EightBitInterface
                         ControlHalt.BackColor = Color.LightGray;
                     }
 
-                    if (stmp.Substring(23, 1) == "1")
+                    if (stmp.Substring(controlStart + 9, 1) == "1")
                     {
                         ControlMemAddrIn.BackColor = setColor;
                     }
@@ -223,7 +230,7 @@ namespace EightBitInterface
                     {
                         ControlMemAddrIn.BackColor = Color.LightGray;
                     }
-                    if (stmp.Substring(24, 1) == "1")
+                    if (stmp.Substring(controlStart + 10, 1) == "1")
                     {
                         ControlMemIn.BackColor = setColor;
                     }
@@ -231,7 +238,7 @@ namespace EightBitInterface
                     {
                         ControlMemIn.BackColor = Color.LightGray;
                     }
-                    if (stmp.Substring(25, 1) == "1")
+                    if (stmp.Substring(controlStart + 11, 1) == "1")
                     {
                         ControlMemOut.BackColor = setColor;
                     }
@@ -239,7 +246,7 @@ namespace EightBitInterface
                     {
                         ControlMemOut.BackColor = Color.LightGray;
                     }
-                    if (stmp.Substring(26, 1) == "1")
+                    if (stmp.Substring(controlStart + 12, 1) == "1")
                     {
                         ControlInstRegOut.BackColor = setColor;
                     }
@@ -247,7 +254,7 @@ namespace EightBitInterface
                     {
                         ControlInstRegOut.BackColor = Color.LightGray;
                     }
-                    if (stmp.Substring(27, 1) == "1")
+                    if (stmp.Substring(controlStart + 13, 1) == "1")
                     {
                         ControlInstRegIn.BackColor = setColor;
                     }
@@ -255,7 +262,7 @@ namespace EightBitInterface
                     {
                         ControlInstRegIn.BackColor = Color.LightGray;
                     }
-                    if (stmp.Substring(28, 1) == "1")
+                    if (stmp.Substring(controlStart + 14, 1) == "1")
                     {
                         ControlARegIn.BackColor = setColor;
                     }
@@ -263,7 +270,7 @@ namespace EightBitInterface
                     {
                         ControlARegIn.BackColor = Color.LightGray;
                     }
-                    if (stmp.Substring(29, 1) == "1")
+                    if (stmp.Substring(controlStart + 15, 1) == "1")
                     {
                         ControlARegOut.BackColor = setColor;
                     }
@@ -271,7 +278,7 @@ namespace EightBitInterface
                     {
                         ControlARegOut.BackColor = Color.LightGray;
                     }
-                    if (stmp.Substring(30, 1) == "1")
+                    if (stmp.Substring(controlStart + 16, 1) == "1")
                     {
                         ControlALUOUT.BackColor = setColor;
                     }
@@ -279,7 +286,7 @@ namespace EightBitInterface
                     {
                         ControlALUOUT.BackColor = Color.LightGray;
                     }
-                    if (stmp.Substring(31, 1) == "1")
+                    if (stmp.Substring(controlStart + 17, 1) == "1")
                     {
                         ControlALUSubtract.BackColor = setColor;
                     }
@@ -287,7 +294,7 @@ namespace EightBitInterface
                     {
                         ControlALUSubtract.BackColor = Color.LightGray;
                     }
-                    if (stmp.Substring(32, 1) == "1")
+                    if (stmp.Substring(controlStart + 18, 1) == "1")
                     {
                         ControlBRegIn.BackColor = setColor;
                     }
@@ -295,7 +302,7 @@ namespace EightBitInterface
                     {
                         ControlBRegIn.BackColor = Color.LightGray;
                     }
-                    if (stmp.Substring(33, 1) == "1")
+                    if (stmp.Substring(controlStart + 19, 1) == "1")
                     {
                         ControlOutVal.BackColor = setColor;
                     }
@@ -303,7 +310,7 @@ namespace EightBitInterface
                     {
                         ControlOutVal.BackColor = Color.LightGray;
                     }
-                    if (stmp.Substring(34, 1) == "1")
+                    if (stmp.Substring(controlStart + 20, 1) == "1")
                     {
                         ControlCounterEnable.BackColor = setColor;
                     }
@@ -311,7 +318,7 @@ namespace EightBitInterface
                     {
                         ControlCounterEnable.BackColor = Color.LightGray;
                     }
-                    if (stmp.Substring(35, 1) == "1")
+                    if (stmp.Substring(controlStart + 21, 1) == "1")
                     {
                         ControlCounterOut.BackColor = setColor;
                     }
@@ -319,7 +326,7 @@ namespace EightBitInterface
                     {
                         ControlCounterOut.BackColor = Color.LightGray;
                     }
-                    if (stmp.Substring(36, 1) == "1")
+                    if (stmp.Substring(controlStart + 22, 1) == "1")
                     {
                         ControlJump.BackColor = setColor;
                     }
@@ -327,7 +334,7 @@ namespace EightBitInterface
                     {
                         ControlJump.BackColor = Color.LightGray;
                     }
-                    if (stmp.Substring(37, 1) == "1")
+                    if (stmp.Substring(controlStart + 23, 1) == "1")
                     {
                         ControlFlags.BackColor = setColor;
                     }
@@ -348,9 +355,10 @@ namespace EightBitInterface
         {
             try
             {
-                if (stmp.Substring(0, 3) == "Bus")
+                int busStart = stmp.IndexOf("Bus");
+                if (busStart>-1)
                 {
-                    if (stmp.Substring(4, 1) == "1")
+                    if (stmp.Substring(busStart+4, 1) == "1")
                     {
                         bus1.BackColor = Color.Red;
                     }
@@ -359,7 +367,7 @@ namespace EightBitInterface
                         bus1.BackColor = Color.LightGray;
                     }
 
-                    if (stmp.Substring(5, 1) == "1")
+                    if (stmp.Substring(busStart + 5, 1) == "1")
                     {
                         bus2.BackColor = Color.Red;
                     }
@@ -368,7 +376,7 @@ namespace EightBitInterface
                         bus2.BackColor = Color.LightGray;
                     }
 
-                    if (stmp.Substring(6, 1) == "1")
+                    if (stmp.Substring(busStart + 6, 1) == "1")
                     {
                         bus3.BackColor = Color.Red;
                     }
@@ -376,7 +384,7 @@ namespace EightBitInterface
                     {
                         bus3.BackColor = Color.LightGray;
                     }
-                    if (stmp.Substring(7, 1) == "1")
+                    if (stmp.Substring(busStart + 7, 1) == "1")
                     {
                         bus4.BackColor = Color.Red;
                     }
@@ -384,7 +392,7 @@ namespace EightBitInterface
                     {
                         bus4.BackColor = Color.LightGray;
                     }
-                    if (stmp.Substring(8, 1) == "1")
+                    if (stmp.Substring(busStart + 8, 1) == "1")
                     {
                         bus5.BackColor = Color.Red;
                     }
@@ -392,7 +400,7 @@ namespace EightBitInterface
                     {
                         bus5.BackColor = Color.LightGray;
                     }
-                    if (stmp.Substring(9, 1) == "1")
+                    if (stmp.Substring(busStart + 9, 1) == "1")
                     {
                         bus6.BackColor = Color.Red;
                     }
@@ -400,7 +408,7 @@ namespace EightBitInterface
                     {
                         bus6.BackColor = Color.LightGray;
                     }
-                    if (stmp.Substring(10, 1) == "1")
+                    if (stmp.Substring(busStart + 10, 1) == "1")
                     {
                         bus7.BackColor = Color.Red;
                     }
@@ -408,7 +416,7 @@ namespace EightBitInterface
                     {
                         bus7.BackColor = Color.LightGray;
                     }
-                    if (stmp.Substring(11, 1) == "1")
+                    if (stmp.Substring(busStart + 11, 1) == "1")
                     {
                         bus8.BackColor = Color.Red;
                     }
@@ -417,6 +425,7 @@ namespace EightBitInterface
                         bus8.BackColor = Color.LightGray;
                     }
                 }
+              
             }
             catch
             {

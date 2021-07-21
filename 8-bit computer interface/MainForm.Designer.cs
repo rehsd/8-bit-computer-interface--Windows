@@ -231,7 +231,7 @@ namespace EightBitInterface
             this.BusGroup.Controls.Add(this.bus3);
             this.BusGroup.Controls.Add(this.bus2);
             this.BusGroup.Controls.Add(this.bus1);
-            this.BusGroup.Location = new System.Drawing.Point(724, 172);
+            this.BusGroup.Location = new System.Drawing.Point(724, 166);
             this.BusGroup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BusGroup.Name = "BusGroup";
             this.BusGroup.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -346,7 +346,7 @@ namespace EightBitInterface
             this.ControlGroup.Controls.Add(this.ControlMemIn);
             this.ControlGroup.Controls.Add(this.ControlMemAddrIn);
             this.ControlGroup.Controls.Add(this.ControlHalt);
-            this.ControlGroup.Location = new System.Drawing.Point(570, 286);
+            this.ControlGroup.Location = new System.Drawing.Point(567, 259);
             this.ControlGroup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ControlGroup.Name = "ControlGroup";
             this.ControlGroup.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -769,7 +769,7 @@ namespace EightBitInterface
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label38.Location = new System.Drawing.Point(312, 0);
+            this.label38.Location = new System.Drawing.Point(303, 0);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(36, 15);
             this.label38.TabIndex = 58;
