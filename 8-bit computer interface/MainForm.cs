@@ -170,7 +170,7 @@ namespace EightBitInterface
                 if (startingLoc > 0)
                 {
                     int closingLoc = stmp.IndexOf('\n', startingLoc);
-                    clockLabel.Text = stmp.Substring(startingLoc + 6, closingLoc-startingLoc-7) + "Hz";
+                    clockLabel.Text = stmp.Substring(startingLoc + 6, closingLoc - startingLoc - 7) + "Hz";
                 }
             }
             catch
@@ -188,7 +188,7 @@ namespace EightBitInterface
                 int closingLoc = stmp.IndexOf("]");
                 if (startingLoc > 0 && closingLoc > 0)
                 {
-                    OutputLabel.Text = stmp.Substring(startingLoc+1, closingLoc - startingLoc-1);
+                    OutputLabel.Text = stmp.Substring(startingLoc + 1, closingLoc - startingLoc - 1);
                 }
             }
             catch
@@ -327,7 +327,7 @@ namespace EightBitInterface
                     {
                         ControlJump.BackColor = Color.LightGray;
                     }
-                    if(stmp.Substring(37,1)=="1")
+                    if (stmp.Substring(37, 1) == "1")
                     {
                         ControlFlags.BackColor = setColor;
                     }
@@ -443,7 +443,7 @@ namespace EightBitInterface
         {
             try
             {
-                if(StartMonitorButton.Text=="Stop &Monitor")
+                if (StartMonitorButton.Text == "Stop &Monitor")
                 {
                     myPort.Write("X");
                     StartMonitorButton.Text = "Start &Monitor";
@@ -529,6 +529,8 @@ namespace EightBitInterface
                 //do nothing for now...
             }
         }
+
+        #region MemXXXX_TextChanged event handlers
 
         private void Mem0000_TextChanged(object sender, EventArgs e)
         {
@@ -623,6 +625,8 @@ namespace EightBitInterface
             UpdateOpCodeLabel((TextBox)sender, code1111);
 
         }
+        #endregion
+
 
         private void StartMonitorButton_Click(object sender, EventArgs e)
         {
@@ -682,6 +686,8 @@ namespace EightBitInterface
             }
 
         }
+
+        #region codeXXXX_Click event handlers:
 
         //TODO Consolidate the following Click event handlers...
         private void code0000_Click(object sender, EventArgs e)
@@ -877,6 +883,8 @@ namespace EightBitInterface
             }
         }
 
+        #endregion
+
         private void MemXXXX_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(e.KeyChar!='1' && e.KeyChar!='0' && e.KeyChar != ((char)Keys.Back))
@@ -912,24 +920,31 @@ namespace EightBitInterface
 
         private void loadSetCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string vals = ConfigurationManager.AppSettings[loadSetCombo.Text];
-            string[] valArray = vals.Split(":");
-            Mem0000.Text = valArray[0];
-            Mem0001.Text = valArray[1];
-            Mem0010.Text = valArray[2];
-            Mem0011.Text = valArray[3];
-            Mem0100.Text = valArray[4];
-            Mem0101.Text = valArray[5];
-            Mem0110.Text = valArray[6];
-            Mem0111.Text = valArray[7];
-            Mem1000.Text = valArray[8];
-            Mem1001.Text = valArray[9];
-            Mem1010.Text = valArray[10];
-            Mem1011.Text = valArray[11];
-            Mem1100.Text = valArray[12];
-            Mem1101.Text = valArray[13];
-            Mem1110.Text = valArray[14];
-            Mem1111.Text = valArray[15];
+            try
+            {
+                string vals = ConfigurationManager.AppSettings[loadSetCombo.Text];
+                string[] valArray = vals.Split(":");
+                Mem0000.Text = valArray[0];
+                Mem0001.Text = valArray[1];
+                Mem0010.Text = valArray[2];
+                Mem0011.Text = valArray[3];
+                Mem0100.Text = valArray[4];
+                Mem0101.Text = valArray[5];
+                Mem0110.Text = valArray[6];
+                Mem0111.Text = valArray[7];
+                Mem1000.Text = valArray[8];
+                Mem1001.Text = valArray[9];
+                Mem1010.Text = valArray[10];
+                Mem1011.Text = valArray[11];
+                Mem1100.Text = valArray[12];
+                Mem1101.Text = valArray[13];
+                Mem1110.Text = valArray[14];
+                Mem1111.Text = valArray[15];
+            }
+            catch (Exception xcp)
+            {
+                MessageBox.Show(xcp.Message, "Ya'...., something failed...");
+            }
         }
 
  
