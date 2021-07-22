@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+    This application is used in conjunction with an Arduino Mega to set RAM values, 
+    read the bus, control bits, output, and clock speed of an 8-bit computer 
+    based on Ben Eater's 8-bit computer reference design.   
+    See https://github.com/rehsd/8-bit-computer-interface--Arduino.
+
+    Last updated July 21, 2021.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,9 +27,9 @@ namespace EightBitInterface
     {
         SerialPort myPort;
         const short MAX_OUTPUT_LINES = 50;
-        const int CONNECTION_RATE = 921600; //Match this to the same const in the Arduino code
-        //const int CONNECTION_RATE = 460800; //Match this to the same const in the Arduino code
-
+        const int CONNECTION_RATE = 921600; //Match this to the same const in the Arduino Mega code.
+                                            //Tested fine at 921600. Depending on the system, lower speeds may be required.
+                                            //Other potential speed options: 460800, 230400, 115200
         public MainForm()
         {
             InitializeComponent();
@@ -28,33 +37,21 @@ namespace EightBitInterface
 
         void PopulateSerialPorts()
         {
-            ManagementObjectCollection mbsList = null;
-            ManagementObjectSearcher mbs = new ManagementObjectSearcher("Select * From Win32_SerialPort");
-            mbsList = mbs.Get();
-
-            foreach (ManagementObject mo in mbsList)
+            try
             {
-                PortsCombo.Items.Add(mo["DeviceID"].ToString() + ": " + mo["Description"].ToString());
+                ManagementObjectCollection mbsList = null;
+                ManagementObjectSearcher mbs = new ManagementObjectSearcher("Select DeviceID, Description From Win32_SerialPort");
+                mbsList = mbs.Get();
+
+                foreach (ManagementObject mo in mbsList)
+                {
+                    PortsCombo.Items.Add(mo["DeviceID"].ToString() + ": " + mo["Description"].ToString());
+                }
             }
-
-
-            
-
-            //var items = new[] {
-            //new { Text = "report A", Value = "reportA" },
-            //new { Text = "report B", Value = "reportB" },
-            //new { Text = "report C", Value = "reportC" },
-            //new { Text = "report D", Value = "reportD" },
-            //new { Text = "report E", Value = "reportE" }
-            //};
-
-            //comboBox.DataSource = items;
-
-            //foreach (string s in SerialPort.GetPortNames())
-            //{
-            //    PortsCombo.Items.Add(s);
-            //}
-            //PortsCombo.Sorted = true;
+            catch (Exception xcp)
+            {
+                MessageBox.Show(xcp.Message, "Ya'...., something failed...");
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -170,10 +167,8 @@ namespace EightBitInterface
                         if (OutputRichtext.Lines.Length > MAX_OUTPUT_LINES)
                         {
                             List<string> lines = OutputRichtext.Lines.ToList();
-                            //lines.RemoveAt(0);
                             lines.RemoveRange(0, lines.Count - MAX_OUTPUT_LINES);
                             OutputRichtext.Lines = lines.ToArray();
-
                         }
 
                         string stmp = myPort.ReadExisting();
@@ -197,9 +192,7 @@ namespace EightBitInterface
             {
                 MessageBox.Show(xcp.Message, "Ya'...., something failed...");
             }
-
         }
-
 
         void UpdateClockDisplay(string stmp)
         {
@@ -209,6 +202,7 @@ namespace EightBitInterface
                 if (startingLoc > 0)
                 {
                     int closingLoc = stmp.IndexOf('\n', startingLoc);
+                    //TO DO Verify that the portion of the string to be read actually is there (i.e., don't try to read the next 8 bits if only a few are availablle)
                     clockLabel.Text = stmp.Substring(startingLoc + 6, closingLoc - startingLoc - 7) + "Hz";
                 }
             }
@@ -929,15 +923,16 @@ namespace EightBitInterface
 
         private void MemXXXX_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //Bound to all the MemXXXX textboxes to filter kepresses down to 1, 0, and Backspace
             if(e.KeyChar!='1' && e.KeyChar!='0' && e.KeyChar != ((char)Keys.Back))
             {
                 e.Handled = true;
             }
-
         }
 
         private void MemXXXX_Leave(object sender, EventArgs e)
         {
+            //Bound to all the MemXXXX textboxes to pad contents to 8 bits, if fewer than 8 bits were entered
             TextBox t = (TextBox)(sender);
             if(t.TextLength<8)
             {
@@ -951,7 +946,6 @@ namespace EightBitInterface
             SendButton.Enabled = enableControls;
             StartMonitorButton.Enabled = enableControls;
             ProgramRAMButton.Enabled = enableControls;
-
         }
 
         private void AboutButton_Click(object sender, EventArgs e)
