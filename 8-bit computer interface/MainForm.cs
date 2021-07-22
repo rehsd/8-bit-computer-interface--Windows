@@ -5,6 +5,10 @@
     See https://github.com/rehsd/8-bit-computer-interface--Arduino.
 
     Last updated July 21, 2021.
+
+    The higher the 8-bit computer clock, the more monitoring will struggle to keep up read all of the data.
+    At 115200 baud, a clock of ~100Hz is the ceiling. 
+    At 921600 baud, monitoring does pretty well keeping up. However, writing to the Arduino/8-bit computer will struggle.
  */
 
 using System;
@@ -27,9 +31,9 @@ namespace EightBitInterface
     {
         SerialPort myPort;
         const short MAX_OUTPUT_LINES = 50;
-        const int CONNECTION_RATE = 921600; //Match this to the same const in the Arduino Mega code.
-                                            //Tested fine at 921600. Depending on the system, lower speeds may be required.
-                                            //Other potential speed options: 460800, 230400, 115200
+        const int CONNECTION_RATE = 115200; //Match this to the same const in the Arduino Mega code.
+                                            //Monitoring runs OK at 921600. Writing to the Mega is flaky at this speed.
+                                            //Potential speed options: 921600, 460800, 230400, 115200
         public MainForm()
         {
             InitializeComponent();
@@ -133,7 +137,7 @@ namespace EightBitInterface
                     System.Threading.Thread.Sleep(1000);
                     myPort.DataReceived += new SerialDataReceivedEventHandler(MyPort_DataReceived);
                     myPort.DiscardInBuffer();
-                    OutputRichtext.Text += "Connected!\n";
+                    OutputRichtext.Text += "Connected at " + myPort.BaudRate.ToString() + "!\n";
                     myPort.Write("X");
                     ConnectButton.Text = "&Disconnect";
                     SetFormControls(true);
@@ -693,27 +697,27 @@ namespace EightBitInterface
             try
             {
                 string newRAMvals = "";
-                newRAMvals += Mem0000.Text;
-                newRAMvals += Mem0001.Text;
-                newRAMvals += Mem0010.Text;
-                newRAMvals += Mem0011.Text;
-                newRAMvals += Mem0100.Text;
-                newRAMvals += Mem0101.Text;
-                newRAMvals += Mem0110.Text;
-                newRAMvals += Mem0111.Text;
-                newRAMvals += Mem1000.Text;
-                newRAMvals += Mem1001.Text;
-                newRAMvals += Mem1010.Text;
-                newRAMvals += Mem1011.Text;
-                newRAMvals += Mem1100.Text;
-                newRAMvals += Mem1101.Text;
-                newRAMvals += Mem1110.Text;
+                newRAMvals += Mem0000.Text + ":";
+                newRAMvals += Mem0001.Text + ":";
+                newRAMvals += Mem0010.Text + ":";
+                newRAMvals += Mem0011.Text + ":";
+                newRAMvals += Mem0100.Text + ":";
+                newRAMvals += Mem0101.Text + ":";
+                newRAMvals += Mem0110.Text + ":";
+                newRAMvals += Mem0111.Text + ":";
+                newRAMvals += Mem1000.Text + ":";
+                newRAMvals += Mem1001.Text + ":";
+                newRAMvals += Mem1010.Text + ":";
+                newRAMvals += Mem1011.Text + ":";
+                newRAMvals += Mem1100.Text + ":";
+                newRAMvals += Mem1101.Text + ":";
+                newRAMvals += Mem1110.Text + ":";
                 newRAMvals += Mem1111.Text;
-                if (MessageBox.Show("About to write to RAM. Board clock mode should be set to manual, memory program mode should be set to enabled, memory address dip switches should be up (on), and memory value dip switches should be up (on).\n\n Would you like to procced?", "RAM update", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("About to write to RAM. Board clock mode should be set to manual, memory program mode should be set to enabled, memory address dip switches should be up (on), and memory value dip switches should be up (on).\n\n Would you like to procced?\n\n\n" + newRAMvals.Replace(":","\n"), "RAM update", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     myPort.Write("C");
                     System.Threading.Thread.Sleep(1000);
-                    myPort.WriteLine(newRAMvals);
+                    myPort.WriteLine(newRAMvals.Replace(":",string.Empty));
                 }
             }
             catch (Exception xcp)
