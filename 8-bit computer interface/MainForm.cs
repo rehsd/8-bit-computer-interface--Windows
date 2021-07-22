@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.IO.Ports;
 using System.Configuration;
+using System.Management;
 
 namespace EightBitInterface
 {
@@ -25,15 +26,42 @@ namespace EightBitInterface
             InitializeComponent();
         }
 
+        void PopulateSerialPorts()
+        {
+            ManagementObjectCollection mbsList = null;
+            ManagementObjectSearcher mbs = new ManagementObjectSearcher("Select * From Win32_SerialPort");
+            mbsList = mbs.Get();
+
+            foreach (ManagementObject mo in mbsList)
+            {
+                PortsCombo.Items.Add(mo["DeviceID"].ToString() + ": " + mo["Description"].ToString());
+            }
+
+
+            
+
+            //var items = new[] {
+            //new { Text = "report A", Value = "reportA" },
+            //new { Text = "report B", Value = "reportB" },
+            //new { Text = "report C", Value = "reportC" },
+            //new { Text = "report D", Value = "reportD" },
+            //new { Text = "report E", Value = "reportE" }
+            //};
+
+            //comboBox.DataSource = items;
+
+            //foreach (string s in SerialPort.GetPortNames())
+            //{
+            //    PortsCombo.Items.Add(s);
+            //}
+            //PortsCombo.Sorted = true;
+        }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
             try
             {
-                foreach (string s in SerialPort.GetPortNames())
-                {
-                    PortsCombo.Items.Add(s);
-                }
-                PortsCombo.SelectedIndex = 0;
+                PopulateSerialPorts();
 
                 foreach (string profileSet in ConfigurationManager.AppSettings)
                 {
@@ -98,13 +126,18 @@ namespace EightBitInterface
             {
                 if (ConnectButton.Text == "&Connect")
                 {
-                    myPort = new SerialPort(PortsCombo.SelectedItem.ToString(), CONNECTION_RATE); 
-                    myPort.DataReceived += new SerialDataReceivedEventHandler(MyPort_DataReceived);
-                    myPort.ReadTimeout = 2000;
-                    myPort.WriteTimeout = 2000;
+                    string s = PortsCombo.SelectedItem.ToString();
+                    s = s.Substring(0, s.IndexOf(":"));
+                    myPort = new SerialPort(s, CONNECTION_RATE); 
+                    myPort.ReadTimeout = 5000;
+                    myPort.WriteTimeout = 5000;
                     myPort.Open();
-                    OutputRichtext.Text += "Connected!\n";
                     connectionStatusPictureBox.BackColor = Color.Green;
+                    System.Threading.Thread.Sleep(1000);
+                    myPort.DataReceived += new SerialDataReceivedEventHandler(MyPort_DataReceived);
+                    myPort.DiscardInBuffer();
+                    OutputRichtext.Text += "Connected!\n";
+                    myPort.Write("X");
                     ConnectButton.Text = "&Disconnect";
                     SetFormControls(true);
                 }
@@ -956,6 +989,9 @@ namespace EightBitInterface
             }
         }
 
- 
+        private void PortsCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ConnectButton.Enabled = true;
+        }
     }
 }

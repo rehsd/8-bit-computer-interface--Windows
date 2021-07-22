@@ -20,6 +20,7 @@ This code and software is provided as-is. Use at your own risk!</Description>
 
   <ItemGroup>
     <PackageReference Include="System.IO.Ports" Version="5.0.1" />
+    <PackageReference Include="System.Management" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
