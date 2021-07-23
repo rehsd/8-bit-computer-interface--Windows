@@ -30,6 +30,9 @@ namespace EightBitInterface
     public partial class MainForm : Form
     {
         SerialPort myPort;
+        bool bHex = true;
+        bool bNowMonitoring = false;
+
         const short MAX_OUTPUT_LINES = 50;
         const int CONNECTION_RATE = 115200; //Match this to the same const in the Arduino Mega code.
                                             //Monitoring runs OK at 921600. Writing to the Mega is flaky at this speed.
@@ -114,6 +117,8 @@ namespace EightBitInterface
                 Mem1111.Text = "00000001";  //5
 
                 SetFormControls(false);
+
+                Advise();
             }
             catch (Exception xcp)
             {
@@ -137,7 +142,8 @@ namespace EightBitInterface
                     System.Threading.Thread.Sleep(1000);
                     myPort.DataReceived += new SerialDataReceivedEventHandler(MyPort_DataReceived);
                     myPort.DiscardInBuffer();
-                    OutputRichtext.Text += "Connected at " + myPort.BaudRate.ToString() + "!\n";
+                    OutputRichtext.Text += "\nConnected at " + myPort.BaudRate.ToString() + "!\n";
+                    connectionSpeedLabel.Text = s + " @ " + myPort.BaudRate.ToString();
                     myPort.Write("X");
                     ConnectButton.Text = "&Disconnect";
                     SetFormControls(true);
@@ -175,16 +181,46 @@ namespace EightBitInterface
                             OutputRichtext.Lines = lines.ToArray();
                         }
 
-                        string stmp = myPort.ReadExisting();
-                        //string stmp = myPort.ReadLine();
+                        string stmp = "";
+                        if (!bNowMonitoring)
+                        {
+                            stmp = myPort.ReadExisting();
+                        }
+                        else
+                        {
+                            //string stmp = myPort.ReadExisting();
+                            stmp = myPort.ReadLine();
+                        }
+                        
+                        bool bSkipped = false;
+                        if (bHex)
+                        {
+                            //Convert complete hex string to complete binary string
+                            stmp = ConvertHexBufferToBinaryBuffer(stmp, ref bSkipped);
+                        }
 
-                        OutputRichtext.Text += stmp;
-                        OutputRichtext.SelectionStart = OutputRichtext.Text.Length;
-                        OutputRichtext.ScrollToCaret();
-                        UpdateBusDisplay(stmp);
-                        UpdateControlDisplay(stmp);
-                        UpdateOutputDisplay(stmp);
-                        UpdateClockDisplay(stmp);
+
+                        if (displayLogCheckBox.Checked)
+                        {
+                            if (bNowMonitoring && bHex)
+                            {
+                                OutputRichtext.Text += stmp + "\r";
+                            }
+                            else { 
+                                OutputRichtext.Text += stmp;
+                            }
+
+                            OutputRichtext.SelectionStart = OutputRichtext.Text.Length;
+                            OutputRichtext.ScrollToCaret();
+                        }
+
+                        if (bNowMonitoring && !bSkipped) 
+                        { 
+                            UpdateBusDisplay(stmp);
+                            UpdateControlDisplay(stmp);
+                            UpdateOutputDisplay(stmp);
+                            UpdateClockDisplay(stmp);
+                        }
                     }));
                 }
                 else
@@ -198,6 +234,61 @@ namespace EightBitInterface
             }
         }
 
+        void Advise()
+        {
+            OutputRichtext.Text += "Monitoring with clock speeds above 100Hz is problematic, unless running very high serial speeds (>400,000 bps).";
+        }
+
+        string ConvertHexBufferToBinaryBuffer(string hexBuffer, ref bool skipped)
+        {
+            //sample in --> BBCCCCFFCCCC
+            //sample out -->  Bus: 00000000  Control: 0000010000000010  Out: 00010110[255]  Clock: 9999
+
+            try
+            {
+                //TO DO Better validation / exception handling
+                if (hexBuffer.Contains(">") || hexBuffer.Contains(":") || hexBuffer.Contains(">") || hexBuffer.Contains("[") || hexBuffer.Contains(" '"))
+                {
+                    skipped = true;
+                    return hexBuffer;
+                }
+
+                hexBuffer = hexBuffer.Replace("\r", "");
+
+                if (hexBuffer.Length != 12)
+                {
+                    skipped = true;
+                    return hexBuffer;
+                }
+
+                skipped = false;
+                string sTemp = "";
+                string sBus = hexBuffer.Substring(0, 2);
+                string sControl = hexBuffer.Substring(2, 4);
+                string sOut = hexBuffer.Substring(6, 2);
+                string sClock = hexBuffer.Substring(8, 4);
+
+                sBus = Convert.ToString(Convert.ToInt32(sBus, 16), 2);
+                sControl = Convert.ToString(Convert.ToInt32(sControl, 16), 2);
+                string sOutDec = Convert.ToString(Convert.ToInt32(sOut, 16), 10);
+                sOut = Convert.ToString(Convert.ToInt32(sOut, 16), 2);
+                sClock = Convert.ToString(Convert.ToInt32(sClock, 16), 10);
+
+                sBus = sBus.PadLeft(8, '0');
+                sControl = sControl.PadLeft(16, '0');
+                sOut = sOut.PadLeft(8, '0');
+
+                sTemp = "Bus:" + sBus + "  Control:" + sControl + "  Out:" + sOut + " [" + sOutDec + "]" + "  Clock:" + sClock;
+
+                return sTemp;
+            }
+            catch
+            {
+                //Do nothing for now...
+                return "";
+            }
+        }
+
         void UpdateClockDisplay(string stmp)
         {
             try
@@ -205,9 +296,19 @@ namespace EightBitInterface
                 int startingLoc = stmp.IndexOf("Clock:");
                 if (startingLoc > 0)
                 {
-                    int closingLoc = stmp.IndexOf('\n', startingLoc);
+                    //int closingLoc = stmp.IndexOf('\n', startingLoc);
                     //TO DO Verify that the portion of the string to be read actually is there (i.e., don't try to read the next 8 bits if only a few are availablle)
-                    clockLabel.Text = stmp.Substring(startingLoc + 6, closingLoc - startingLoc - 7) + "Hz";
+                    //clockLabel.Text = stmp.Substring(startingLoc + 6, closingLoc - startingLoc - 7) + "Hz";
+                    short clockSpeed = short.Parse(stmp.Substring(startingLoc + 6, stmp.Length - startingLoc - 6));
+                    clockLabel.Text = clockSpeed + "Hz";
+                    if(clockSpeed > 100)
+                    {
+                        clockLabel.ForeColor = Color.Red;
+                    }
+                    else
+                    {
+                        clockLabel.ForeColor = Color.DimGray;
+                    }
                 }
             }
             catch
@@ -674,7 +775,19 @@ namespace EightBitInterface
             {
                 if (StartMonitorButton.Text == "Start &Monitor")
                 {
-                    myPort.Write("M");
+                    bNowMonitoring = true;
+
+                    if(useHexCheckBox.Checked)
+                    {
+                        bHex = true;
+                        myPort.Write("H");
+                    }
+                    else
+                    {
+                        bHex = false;
+                        myPort.Write("M");
+                    }
+
                     StartMonitorButton.Text = "Stop &Monitor";
                     ProgramRAMButton.Enabled = false;
                 }
@@ -683,6 +796,8 @@ namespace EightBitInterface
                     myPort.Write("X");
                     StartMonitorButton.Text = "Start &Monitor";
                     ProgramRAMButton.Enabled = true;
+                    bNowMonitoring = false;
+
                 }
             }
             catch (Exception xcp)
@@ -990,6 +1105,11 @@ namespace EightBitInterface
         private void PortsCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
             ConnectButton.Enabled = true;
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            OutputRichtext.Clear();
         }
     }
 }
