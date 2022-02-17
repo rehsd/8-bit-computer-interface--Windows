@@ -145,6 +145,9 @@ namespace EightBitInterface
             this.clearButton = new System.Windows.Forms.Button();
             this.label39 = new System.Windows.Forms.Label();
             this.connectionSpeedLabel = new System.Windows.Forms.Label();
+            this.logMax = new System.Windows.Forms.NumericUpDown();
+            this.label40 = new System.Windows.Forms.Label();
+            this.analyzeButton = new System.Windows.Forms.Button();
             this.BusGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bus8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bus7)).BeginInit();
@@ -175,13 +178,14 @@ namespace EightBitInterface
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.connectionStatusPictureBox)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logMax)).BeginInit();
             this.SuspendLayout();
             // 
             // ConnectButton
             // 
             this.ConnectButton.Enabled = false;
             this.ConnectButton.Location = new System.Drawing.Point(618, 23);
-            this.ConnectButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ConnectButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ConnectButton.Name = "ConnectButton";
             this.ConnectButton.Size = new System.Drawing.Size(204, 57);
             this.ConnectButton.TabIndex = 1;
@@ -193,16 +197,16 @@ namespace EightBitInterface
             // 
             this.PortsCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PortsCombo.FormattingEnabled = true;
-            this.PortsCombo.Location = new System.Drawing.Point(103, 23);
+            this.PortsCombo.Location = new System.Drawing.Point(113, 23);
             this.PortsCombo.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.PortsCombo.Name = "PortsCombo";
-            this.PortsCombo.Size = new System.Drawing.Size(492, 49);
+            this.PortsCombo.Size = new System.Drawing.Size(482, 49);
             this.PortsCombo.TabIndex = 0;
             this.PortsCombo.SelectedIndexChanged += new System.EventHandler(this.PortsCombo_SelectedIndexChanged);
             // 
             // CommandTextbox
             // 
-            this.CommandTextbox.Location = new System.Drawing.Point(436, 1649);
+            this.CommandTextbox.Location = new System.Drawing.Point(436, 1648);
             this.CommandTextbox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.CommandTextbox.Name = "CommandTextbox";
             this.CommandTextbox.Size = new System.Drawing.Size(563, 47);
@@ -221,10 +225,10 @@ namespace EightBitInterface
             // 
             // OutputRichtext
             // 
-            this.OutputRichtext.Location = new System.Drawing.Point(32, 243);
+            this.OutputRichtext.Location = new System.Drawing.Point(32, 244);
             this.OutputRichtext.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.OutputRichtext.Name = "OutputRichtext";
-            this.OutputRichtext.Size = new System.Drawing.Size(1137, 1366);
+            this.OutputRichtext.Size = new System.Drawing.Size(1137, 1365);
             this.OutputRichtext.TabIndex = 24;
             this.OutputRichtext.Text = "";
             // 
@@ -806,7 +810,7 @@ namespace EightBitInterface
             this.loadSetCombo.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.loadSetCombo.FormattingEnabled = true;
             this.loadSetCombo.Location = new System.Drawing.Point(731, 0);
-            this.loadSetCombo.Margin = new System.Windows.Forms.Padding(2);
+            this.loadSetCombo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loadSetCombo.Name = "loadSetCombo";
             this.loadSetCombo.Size = new System.Drawing.Size(346, 39);
             this.loadSetCombo.TabIndex = 57;
@@ -1470,10 +1474,10 @@ namespace EightBitInterface
             // 
             // StartMonitorButton
             // 
-            this.StartMonitorButton.Location = new System.Drawing.Point(618, 113);
+            this.StartMonitorButton.Location = new System.Drawing.Point(967, 119);
             this.StartMonitorButton.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.StartMonitorButton.Name = "StartMonitorButton";
-            this.StartMonitorButton.Size = new System.Drawing.Size(207, 63);
+            this.StartMonitorButton.Size = new System.Drawing.Size(206, 64);
             this.StartMonitorButton.TabIndex = 3;
             this.StartMonitorButton.Text = "Start &Monitor";
             this.StartMonitorButton.UseVisualStyleBackColor = true;
@@ -1483,7 +1487,7 @@ namespace EightBitInterface
             // 
             this.connectionStatusPictureBox.BackColor = System.Drawing.Color.Red;
             this.connectionStatusPictureBox.Location = new System.Drawing.Point(829, 27);
-            this.connectionStatusPictureBox.Margin = new System.Windows.Forms.Padding(2);
+            this.connectionStatusPictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.connectionStatusPictureBox.Name = "connectionStatusPictureBox";
             this.connectionStatusPictureBox.Size = new System.Drawing.Size(51, 49);
             this.connectionStatusPictureBox.TabIndex = 26;
@@ -1493,7 +1497,7 @@ namespace EightBitInterface
             // 
             this.AboutButton.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AboutButton.Location = new System.Drawing.Point(2238, 14);
-            this.AboutButton.Margin = new System.Windows.Forms.Padding(6);
+            this.AboutButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.AboutButton.Name = "AboutButton";
             this.AboutButton.Size = new System.Drawing.Size(142, 47);
             this.AboutButton.TabIndex = 27;
@@ -1531,7 +1535,7 @@ namespace EightBitInterface
             this.displayLogCheckBox.Checked = true;
             this.displayLogCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.displayLogCheckBox.Location = new System.Drawing.Point(346, 123);
-            this.displayLogCheckBox.Margin = new System.Windows.Forms.Padding(6);
+            this.displayLogCheckBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.displayLogCheckBox.Name = "displayLogCheckBox";
             this.displayLogCheckBox.Size = new System.Drawing.Size(210, 45);
             this.displayLogCheckBox.TabIndex = 28;
@@ -1544,7 +1548,7 @@ namespace EightBitInterface
             this.useHexCheckBox.Checked = true;
             this.useHexCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.useHexCheckBox.Location = new System.Drawing.Point(47, 123);
-            this.useHexCheckBox.Margin = new System.Windows.Forms.Padding(6);
+            this.useHexCheckBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.useHexCheckBox.Name = "useHexCheckBox";
             this.useHexCheckBox.Size = new System.Drawing.Size(265, 45);
             this.useHexCheckBox.TabIndex = 29;
@@ -1554,9 +1558,10 @@ namespace EightBitInterface
             // clearButton
             // 
             this.clearButton.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.clearButton.Location = new System.Drawing.Point(1074, 190);
+            this.clearButton.Location = new System.Drawing.Point(32, 182);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(95, 42);
+            this.clearButton.Size = new System.Drawing.Size(96, 51);
             this.clearButton.TabIndex = 30;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
@@ -1565,7 +1570,8 @@ namespace EightBitInterface
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(29, 26);
+            this.label39.Location = new System.Drawing.Point(30, 27);
+            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(72, 41);
             this.label39.TabIndex = 31;
@@ -1574,17 +1580,61 @@ namespace EightBitInterface
             // connectionSpeedLabel
             // 
             this.connectionSpeedLabel.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.connectionSpeedLabel.Location = new System.Drawing.Point(885, 34);
+            this.connectionSpeedLabel.Location = new System.Drawing.Point(884, 35);
+            this.connectionSpeedLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.connectionSpeedLabel.Name = "connectionSpeedLabel";
             this.connectionSpeedLabel.Size = new System.Drawing.Size(336, 51);
             this.connectionSpeedLabel.TabIndex = 32;
+            // 
+            // logMax
+            // 
+            this.logMax.Location = new System.Drawing.Point(774, 121);
+            this.logMax.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.logMax.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.logMax.Name = "logMax";
+            this.logMax.Size = new System.Drawing.Size(162, 47);
+            this.logMax.TabIndex = 33;
+            this.logMax.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(618, 125);
+            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(132, 41);
+            this.label40.TabIndex = 34;
+            this.label40.Text = "Log Max";
+            // 
+            // analyzeButton
+            // 
+            this.analyzeButton.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.analyzeButton.Location = new System.Drawing.Point(165, 183);
+            this.analyzeButton.Margin = new System.Windows.Forms.Padding(2);
+            this.analyzeButton.Name = "analyzeButton";
+            this.analyzeButton.Size = new System.Drawing.Size(147, 51);
+            this.analyzeButton.TabIndex = 35;
+            this.analyzeButton.Text = "Analyze";
+            this.analyzeButton.UseVisualStyleBackColor = true;
+            this.analyzeButton.Click += new System.EventHandler(this.analyzeButton_Click);
             // 
             // MainForm
             // 
             this.AcceptButton = this.SendButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2397, 1810);
+            this.ClientSize = new System.Drawing.Size(2397, 1766);
+            this.Controls.Add(this.analyzeButton);
+            this.Controls.Add(this.label40);
+            this.Controls.Add(this.logMax);
             this.Controls.Add(this.connectionSpeedLabel);
             this.Controls.Add(this.label39);
             this.Controls.Add(this.clearButton);
@@ -1603,7 +1653,7 @@ namespace EightBitInterface
             this.Controls.Add(this.CommandTextbox);
             this.Controls.Add(this.PortsCombo);
             this.Controls.Add(this.ConnectButton);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainForm";
             this.Text = "8-bit Computer Interface";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
@@ -1640,6 +1690,7 @@ namespace EightBitInterface
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.connectionStatusPictureBox)).EndInit();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.logMax)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1763,6 +1814,9 @@ namespace EightBitInterface
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label connectionSpeedLabel;
+        private System.Windows.Forms.NumericUpDown logMax;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Button analyzeButton;
     }
 }
 

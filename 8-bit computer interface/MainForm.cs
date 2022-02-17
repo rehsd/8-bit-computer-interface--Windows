@@ -33,7 +33,7 @@ namespace EightBitInterface
         bool bHex = true;
         bool bNowMonitoring = false;
 
-        const short MAX_OUTPUT_LINES = 50;
+        //const short MAX_OUTPUT_LINES = 50;    //Replaced with UpDown
         const int CONNECTION_RATE = 115200; //Match this to the same const in the Arduino Mega code.
                                             //Monitoring runs OK at 921600. Writing to the Mega is flaky at this speed.
                                             //Potential speed options: 921600, 460800, 230400, 115200
@@ -174,10 +174,10 @@ namespace EightBitInterface
                 {
                     this.Invoke(new MethodInvoker(delegate
                     {
-                        if (OutputRichtext.Lines.Length > MAX_OUTPUT_LINES)
+                    if (OutputRichtext.Lines.Length > logMax.Value)
                         {
                             List<string> lines = OutputRichtext.Lines.ToList();
-                            lines.RemoveRange(0, lines.Count - MAX_OUTPUT_LINES);
+                            lines.RemoveRange(0, lines.Count - (int)logMax.Value);
                             OutputRichtext.Lines = lines.ToArray();
                         }
 
@@ -768,7 +768,6 @@ namespace EightBitInterface
         }
         #endregion
 
-
         private void StartMonitorButton_Click(object sender, EventArgs e)
         {
             try
@@ -1110,6 +1109,12 @@ namespace EightBitInterface
         private void clearButton_Click(object sender, EventArgs e)
         {
             OutputRichtext.Clear();
+        }
+
+        private void analyzeButton_Click(object sender, EventArgs e)
+        {
+            LogicAnalyzer frmLA = new LogicAnalyzer();
+            frmLA.Show();
         }
     }
 }
